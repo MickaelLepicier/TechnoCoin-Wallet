@@ -1,0 +1,33 @@
+ToDos:
+
+בונה את הצורה שב הMenu Page  יהיה
+
+הנה אתר עם כמה דוגמאות: 
+
+https://www.freshrelevance.com/blog/dynamic-navigation-bar-examples/
+
+
+לאחר מכן בודק האם כדאי להיעזר בbootstrap או עם מודלים שכבר מוכנים של ריאקט ככה תהיה לי פחות עבודה
+
+
+
+PROJECT IN REACT :
+
+Wright in the terminal:
+
+1. npx create-react-app myapp
+2. 
+3. npm i axis react-redux react-router-dom react-scripts react-use redux web-vitals
+
+5. cd myapp
+
+
+
+
+
+
+
+
+Link to React Course at Yang-Arad:
+
+https://drive.google.com/drive/folders/1EA0PyUOeIuhF6swrxQf9nk93ITHxgWwX
