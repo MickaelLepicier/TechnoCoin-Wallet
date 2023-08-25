@@ -1,5 +1,9 @@
 ToDos:
 
+Understand how NavBar works and put it in my code :
+https://www.geeksforgeeks.org/create-a-responsive-navbar-using-reactjs/
+
+
 בונה את הצורה שב הMenu Page  יהיה
 
 הנה אתר עם כמה דוגמאות: 
