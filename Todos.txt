@@ -1,12 +1,11 @@
 ToDos:
 
-Understand how NavBar works and put it in my code :
-https://www.geeksforgeeks.org/create-a-responsive-navbar-using-reactjs/
+1.
+NavBar ממשיך לעשות את הכפתורים ב
+לאחר מכן מעצב אותם שהם יהיו מסודרים ויפים
 
-
-בונה את הצורה שב הMenu Page  יהיה
-
-הנה אתר עם כמה דוגמאות: 
+2.
+הנה אתר עם כמה דוגמאות לעיצובים של מניו-באר : 
 
 https://www.freshrelevance.com/blog/dynamic-navigation-bar-examples/
 

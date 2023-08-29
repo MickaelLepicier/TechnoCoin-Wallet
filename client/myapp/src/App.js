@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
-import { Home } from "./pages/Home/Home.js";
-import { PageTwo } from "./pages/PageTwo/PageTwo.js";
-import { MenuBar } from "./components/MenuBar copy/MenuBar.js";
-import { Footer } from "./components/Footer/Footer.js";
-// import "./App.css";
+import { Home } from "./pages/home/Home.js";
+import { PageTwo } from "./pages/pageTwo/PageTwo.js";
+import { MenuBar } from "./components/menuBar/MenuBar.js";
+import { Footer } from "./components/footer/Footer.js";
+import "./App.css";
 
 function App() {
   return (
