@@ -5,7 +5,7 @@ ToDos:
 react navBar full project : 
 https://www.youtube.com/watch?v=23BHwAFIZmk
 
-changing my code like this video minit: 10:00
+changing my code in NavBar like this video minit: 10:00
 
 
 
