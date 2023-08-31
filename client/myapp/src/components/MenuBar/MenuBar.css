@@ -1,5 +1,7 @@
-.navBar-container{
-    background-color:azure;
+.menuBar-container{
+    background-color:grey;
     border: solid 1px black;
     display: flex;
+    /* width: 100%; */
+    justify-content: space-evenly;
   }

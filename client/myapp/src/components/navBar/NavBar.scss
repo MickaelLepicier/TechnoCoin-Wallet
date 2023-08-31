@@ -1,0 +1,20 @@
+.navBar-container{
+    // background-color:azure;
+    // border: solid 1px black;
+    display: flex;
+    width: 80%;
+    
+    button{
+      width: 20%;
+      // margin:0% 0.5%;
+      background-color: grey;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover{
+      background-color: rgba(255, 255, 255, 0.592);
+      color: black;
+
+    }
+  }

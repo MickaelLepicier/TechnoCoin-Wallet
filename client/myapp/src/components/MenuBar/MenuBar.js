@@ -1,5 +1,5 @@
 import { Logo } from "../logo/logo";
-import { NavBar } from "../navBar/navBar";
+import { NavBar } from "../navBar/NavBar";
 import "./MenuBar.css";
 
 export function MenuBar() {
