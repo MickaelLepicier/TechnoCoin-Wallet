@@ -2,22 +2,18 @@ ToDos:
 
 1.
 
-מסכל במסמך פידיאפ שטל הביא לי ורואה מה עלי לרשום במניו-באר
+react navBar full project : 
+https://www.youtube.com/watch?v=23BHwAFIZmk
 
-NavBar ממשיך לעשות את הכפתורים ב
-לאחר מכן מעצב אותם שהם יהיו מסודרים ויפים
+changing my code like this video minit: 10:00
 
-2.
-הנה אתר עם כמה דוגמאות לעיצובים של מניו-באר : 
 
-https://www.freshrelevance.com/blog/dynamic-navigation-bar-examples/
+
+
 
 
 לאחר מכן בודק האם כדאי להיעזר בbootstrap או עם מודלים שכבר מוכנים של ריאקט ככה תהיה לי פחות עבודה
 
-
-react navBar full project : 
-https://www.youtube.com/watch?v=23BHwAFIZmk
 
 
 PROJECT IN REACT :

@@ -1,9 +1,14 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./NavBar.scss";
+import { useState } from "react";
 
 export function NavBar() {
   const navigate = useNavigate();
+  const [clicked, setClick] = useState(false);
 
+  const handleClick = () => {
+    setClick(!clicked);
+  };
   return (
     <div className="navBar-container">
       <button onClick={() => navigate("/")}>Home</button>
@@ -17,6 +22,9 @@ export function NavBar() {
       <button onClick={() => navigate("/pageTwo")}>Admin Tools</button>
       {/* option 1, option 2 */}
       <button onClick={() => navigate("/pageTwo")}>Logout</button>
+      <div id="mobile" onClick={handleClick}>
+        <i id="bar" className={clicked ? "fas fa-times" : "fas fa-bars"} />
+      </div>
     </div>
   );
 }
