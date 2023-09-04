@@ -1,7 +1,11 @@
 .menuBar-container{
     background-color:grey;
-    border: solid 1px black;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    /* justify-content: space-around; */
     /* width: 100%; */
-    justify-content: space-evenly;
+
+    /* box-shadow: rgba(149, 157, 165, 0.526) 0px 8px 24px; */
   }

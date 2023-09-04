@@ -2,9 +2,63 @@ import { Link, useNavigate } from "react-router-dom";
 import "./NavBar.scss";
 import { useState } from "react";
 
-// TODO like the video minit 10:00
+// TODO create object data with [{'Home','/'}, {'Topups','/pageTwo'}]...
+// TODO create a loop to render all that
+
 export function NavBar() {
-  return <div className="navBar-container"></div>;
+  const navigate = useNavigate();
+  const [clicked, setClick] = useState(false);
+
+  const handleClick = () => {
+    setClick(!clicked);
+  };
+  return (
+    <div className="navBar-container">
+      <ul className={clicked ? "mobileOn" : ""}>
+        <li>
+          {" "}
+          <div className="active" onClick={() => navigate("/")}>
+            Home
+          </div>
+        </li>
+        <li>
+          {" "}
+          <div onClick={() => navigate("/pageTwo")}>Topups</div>
+        </li>
+        <li>
+          {" "}
+          <div onClick={() => navigate("/pageTwo")}>Transfer</div>
+        </li>
+        <li>
+          {" "}
+          <div onClick={() => navigate("/pageTwo")}>Deposits</div>
+        </li>
+        <li>
+          {" "}
+          <div onClick={() => navigate("/pageTwo")}>Send Money</div>
+        </li>
+        <li>
+          {" "}
+          <div onClick={() => navigate("/pageTwo")}>Settings</div>
+        </li>
+        <li>
+          {" "}
+          <div onClick={() => navigate("/pageTwo")}>NFT</div>
+        </li>
+        <li>
+          {" "}
+          <div onClick={() => navigate("/pageTwo")}>Admin Tools</div>
+        </li>
+        <li>
+          {" "}
+          <div onClick={() => navigate("/pageTwo")}>Logout</div>
+        </li>
+      </ul>
+      <div id="mobile" onClick={handleClick}>
+        <i id="bar" className={clicked ? "fas fa-times" : "fas fa-bars"} />
+      </div>
+    </div>
+  );
 }
 
 // export function NavBar() {

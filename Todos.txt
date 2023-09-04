@@ -1,11 +1,17 @@
 ToDos:
 
-1.
 
+1. 
+A. מוריד את החצי שורה מהמילים
+B. עושה שכל מילה שאני לוחץ עליה אז משתנה לצבע שחור
+    its about the className "active" in line :20
+    
+
+
+----------------------------------
 react navBar full project : 
 https://www.youtube.com/watch?v=23BHwAFIZmk
 
-changing my code in NavBar like this video minit: 10:00
 
 
 
