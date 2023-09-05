@@ -2,28 +2,87 @@ import { Link, useNavigate } from "react-router-dom";
 import "./NavBar.scss";
 import { useState } from "react";
 
-// TODO create object data with [{'Home','/'}, {'Topups','/pageTwo'}]...
-// TODO create a loop to render all that
+/*
+// TODO create a loop to render all that:
+
+// navBar titles
+const navBarData = [
+  "Home",
+  "Topups",
+  "Transfer",
+  "Deposits",
+  "Send Money",
+  "Settings",
+  "NFT",
+  "Admin Tools",
+  "Logout",
+];
+
+function renderNavBarList(navigate) {
+  // const navigate = useNavigate();
+  const [activeLink, setActiveLink] = useState("/");
+
+  const handleLinkClick = (path) => {
+    setActiveLink(path);
+    navigate(path);
+  };
+
+  return;
+}
+
+*/
 
 export function NavBar() {
   const navigate = useNavigate();
-  const [clicked, setClick] = useState(false);
+  const [iconClicked, setIconClicked] = useState(false);
+  const [activeLink, setActiveLink] = useState("/");
+
+  const [showNFTMenu, setShowNFTMenu] = useState(false);
+  const [adminToolsMenu, setShowAdminToolsMenu] = useState(false);
+
+  const handleLinkClick = (path) => {
+    setShowNFTMenu(false);
+    setShowAdminToolsMenu(false);
+    setActiveLink(path);
+    navigate(path);
+  };
 
   const handleClick = () => {
-    setClick(!clicked);
+    setIconClicked(!iconClicked);
   };
+
+  const NFTFunction = () => {
+    setShowAdminToolsMenu(false);
+    setShowNFTMenu(!showNFTMenu);
+    navigate("/pageTwo");
+  };
+
+  const adminToolsFunction = () => {
+    setShowNFTMenu(false);
+    setShowAdminToolsMenu(!adminToolsMenu);
+    navigate("/pageTwo");
+  };
+
   return (
     <div className="navBar-container">
-      <ul className={clicked ? "mobileOn" : ""}>
+      <ul className={iconClicked ? "mobileOn" : ""}>
         <li>
           {" "}
-          <div className="active" onClick={() => navigate("/")}>
+          <div
+            className={`link ${activeLink === "/" ? "active" : ""}`}
+            onClick={() => handleLinkClick("/")}
+          >
             Home
           </div>
         </li>
         <li>
           {" "}
-          <div onClick={() => navigate("/pageTwo")}>Topups</div>
+          <div
+            className={`link ${activeLink === "/pageTwo" ? "active" : ""}`}
+            onClick={() => handleLinkClick("/pageTwo")}
+          >
+            Topups
+          </div>
         </li>
         <li>
           {" "}
@@ -43,11 +102,29 @@ export function NavBar() {
         </li>
         <li>
           {" "}
-          <div onClick={() => navigate("/pageTwo")}>NFT</div>
+          <div onClick={() => NFTFunction()}>
+            NFT
+            {/* <div class="fa fa-caret-down" /> */}
+          </div>
+          <div className={showNFTMenu ? "menu-open" : "menu-close"}>
+            <div onClick={() => navigate("/pageTwo")}>action</div>
+            <div onClick={() => navigate("/pageTwo")}>another action</div>
+          </div>
         </li>
         <li>
           {" "}
-          <div onClick={() => navigate("/pageTwo")}>Admin Tools</div>
+          <div onClick={() => adminToolsFunction("/pageTwo")}>
+            Admin Tools
+            {/* <div class="fa fa-caret-down" /> */}
+          </div>
+          <div className={adminToolsMenu ? "menu-open" : "menu-close"}>
+            <div className="menu-option" onClick={() => navigate("/pageTwo")}>
+              action
+            </div>
+            <div className="menu-option" onClick={() => navigate("/pageTwo")}>
+              another action
+            </div>
+          </div>
         </li>
         <li>
           {" "}
@@ -55,37 +132,8 @@ export function NavBar() {
         </li>
       </ul>
       <div id="mobile" onClick={handleClick}>
-        <i id="bar" className={clicked ? "fas fa-times" : "fas fa-bars"} />
+        <i className={iconClicked ? "fas fa-times" : "fas fa-bars"} />
       </div>
     </div>
   );
 }
-
-// export function NavBar() {
-//   const navigate = useNavigate();
-//   const [clicked, setClick] = useState(false);
-
-//   const handleClick = () => {
-//     setClick(!clicked);
-//   };
-//   return (
-//     <div className="navBar-container">
-//       <button onClick={() => navigate("/")}>Home</button>
-//       <button onClick={() => navigate("/pageTwo")}>Topups</button>
-//       <button onClick={() => navigate("/pageTwo")}>Transfer</button>
-//       <button onClick={() => navigate("/pageTwo")}>Deposits</button>
-//       <button onClick={() => navigate("/pageTwo")}>Send Money</button>
-//       <button onClick={() => navigate("/pageTwo")}>Settings</button>
-//       <button onClick={() => navigate("/pageTwo")}>NFT</button>
-//       {/* option 1, option 2 */}
-//       <button onClick={() => navigate("/pageTwo")}>Admin Tools</button>
-//       {/* option 1, option 2 */}
-//       <button onClick={() => navigate("/pageTwo")}>Logout</button>
-//       <div id="mobile" onClick={handleClick}>
-//         <i id="bar" className={clicked ? "fas fa-times" : "fas fa-bars"} />
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default MenuBar;
