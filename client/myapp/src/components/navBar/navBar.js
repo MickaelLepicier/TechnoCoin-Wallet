@@ -51,16 +51,18 @@ export function NavBar() {
     setIconClicked(!iconClicked);
   };
 
-  const NFTFunction = () => {
+  const NFTFunction = (path) => {
     setShowAdminToolsMenu(false);
     setShowNFTMenu(!showNFTMenu);
-    navigate("/pageTwo");
+    setActiveLink(path);
+    // navigate(path);
   };
 
-  const adminToolsFunction = () => {
+  const adminToolsFunction = (path) => {
     setShowNFTMenu(false);
     setShowAdminToolsMenu(!adminToolsMenu);
-    navigate("/pageTwo");
+    setActiveLink(path);
+    // navigate(path);
   };
 
   return (
@@ -102,7 +104,10 @@ export function NavBar() {
         </li>
         <li>
           {" "}
-          <div onClick={() => NFTFunction()}>
+          <div
+            className={`link ${activeLink === "/NFTPage" ? "active" : ""}`}
+            onClick={() => NFTFunction("/NFTPage")}
+          >
             NFT
             {/* <div class="fa fa-caret-down" /> */}
           </div>
@@ -113,7 +118,12 @@ export function NavBar() {
         </li>
         <li>
           {" "}
-          <div onClick={() => adminToolsFunction("/pageTwo")}>
+          <div
+            className={`link ${
+              activeLink === "/AdminToolsPage" ? "active" : ""
+            }`}
+            onClick={() => adminToolsFunction("/AdminToolsPage")}
+          >
             Admin Tools
             {/* <div class="fa fa-caret-down" /> */}
           </div>
