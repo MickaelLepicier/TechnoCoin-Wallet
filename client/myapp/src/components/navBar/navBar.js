@@ -109,7 +109,7 @@ export function NavBar() {
             onClick={() => NFTFunction("/NFTPage")}
           >
             NFT
-            {/* <div class="fa fa-caret-down" /> */}
+            <div className="fa fa-caret-down" />
           </div>
           <div className={showNFTMenu ? "menu-open" : "menu-close"}>
             <div onClick={() => navigate("/pageTwo")}>action</div>
@@ -125,7 +125,7 @@ export function NavBar() {
             onClick={() => adminToolsFunction("/AdminToolsPage")}
           >
             Admin Tools
-            {/* <div class="fa fa-caret-down" /> */}
+            <div className="fa fa-caret-down" />
           </div>
           <div className={adminToolsMenu ? "menu-open" : "menu-close"}>
             <div className="menu-option" onClick={() => navigate("/pageTwo")}>
