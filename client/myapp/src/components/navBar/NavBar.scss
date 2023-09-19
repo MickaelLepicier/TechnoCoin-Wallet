@@ -2,18 +2,10 @@
 
 display: flex;
 
-
- // background-color:azure;
-    // border: solid 1px black;
-    // display: flex;
-    // width: 80%;
-
     ul{
       display: flex;
       align-items: center;
-      // justify-content: center;
       justify-content:right;
-      // box-shadow: 0 5px 15px rgba(0,0,0,0.06);
     }
     li{
       list-style-type: none;
@@ -29,23 +21,19 @@ display: flex;
     
     li:hover{
       background-color: rgba(255, 255, 255, 0.592);
-      // font-size: larger;
       color: black;
     }
     li div.active{
-      // font-size: larger;
       color: black;
     }
     li:hover::after,
     li div.active::after{
-      // content: "";
       width: 30%;
       height: 2px;
       background:black ;
       position: absolute;
       bottom: -4px;
       left: 20px ;
-
     }
 
     .link{
@@ -63,21 +51,16 @@ display: flex;
 
     .menu-close{
       display: none;
-      // transition: 0.3s ease-in-out;
      }
     .menu-open{
       display: block;
-      background-color: grey;
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,135,255,1) 0%, rgba(58,184,255,1) 35%, rgba(34,218,255,1) 100%);
       color: white;
       position: fixed;
-      // width: 12%;
-      top: 100px;
+      top: 90px;
       padding: 1%;
       transition: 0.3s ease-in-out;
       border-radius:0 0 10px 10px;
-      // flex-direction: column;
-      // right: 15%;
-      // transition: 0.3s ease-in-out;
     }
 
     .menu-open div{
@@ -89,8 +72,6 @@ display: flex;
       background-color: rgba(255, 255, 255, 0.592);
       color: black;
     }    
-
- 
     
     @media screen and (max-width: 1200px ){
 
@@ -100,12 +81,11 @@ display: flex;
         align-items: flex-start;
         justify-content:flex-start;
         position: fixed;
-        top: 100px;
+        top: 90px;
         right:-300px;
         width: 300px;
         height:100vh;
-        background: grey;
-        box-shadow: 0 40px 60px rgba(0, 0, 0,0.1);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,135,255,1) 0%, rgba(58,184,255,1) 35%, rgba(34,218,255,1) 100%);
         padding: 40px 0 0 10px;
         transition: 0.3s ease-in-out;
       }
@@ -116,12 +96,10 @@ display: flex;
 
       li{
         margin-bottom: 10%;
-        // font-size: large;
       }
 
       #mobile {
         display: block;
-        // margin: auto;
         cursor: pointer;
         margin-right: 30px;
       }
@@ -130,14 +108,12 @@ display: flex;
         font-size: 130%;
       }
 
-
-
       .menu-close{
         display: none;
        }
       .menu-open{
         display: block;
-        background-color: grey;
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,135,255,0) 0%, rgba(58,184,255,0) 35%, rgba(34,218,255,0) 100%);
         color: white;
         position: initial;
         transition: 0.3s ease-in-out;
@@ -150,15 +126,10 @@ display: flex;
   
       .menu-open div:hover{
         border-radius: 10px;
-        background-color:grey;
-        // background-color: rgba(255, 255, 255, 0.592);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,135,255,1) 0%, rgba(58,184,255,1) 35%, rgba(34,218,255,1) 100%);
         color: black;
       }    
-
-
-
     }
-
   }
 
 

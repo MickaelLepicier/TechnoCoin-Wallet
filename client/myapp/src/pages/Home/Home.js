@@ -3,7 +3,7 @@ import "./Home.css";
 export function Home() {
   return (
     <div className="home-container">
-      <h2>Home</h2>
+      <h2>HomePage</h2>
     </div>
   );
 }
