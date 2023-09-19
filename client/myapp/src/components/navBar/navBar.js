@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./NavBar.scss";
 import { useState } from "react";
 
@@ -7,8 +7,8 @@ import { useState } from "react";
 
 // navBar titles
 const navBarData = [
-  "Home",
-  "Topups",
+  {"Home","/"}
+  {"Topups","/pageTwo"}
   "Transfer",
   "Deposits",
   "Send Money",
@@ -22,7 +22,7 @@ function renderNavBarList(navigate) {
   // const navigate = useNavigate();
   const [activeLink, setActiveLink] = useState("/");
 
-  const handleLinkClick = (path) => {
+  const linkClick = (path) => {
     setActiveLink(path);
     navigate(path);
   };
@@ -40,29 +40,38 @@ export function NavBar() {
   const [showNFTMenu, setShowNFTMenu] = useState(false);
   const [adminToolsMenu, setShowAdminToolsMenu] = useState(false);
 
-  const handleLinkClick = (path) => {
+  const classNameFunc = (str) => {
+    return `link ${activeLink === str ? "active" : ""}`;
+  };
+
+  const linkClick = (path) => {
     setShowNFTMenu(false);
     setShowAdminToolsMenu(false);
     setActiveLink(path);
     navigate(path);
   };
 
-  const handleClick = () => {
+  const iconClick = () => {
     setIconClicked(!iconClicked);
   };
 
-  const NFTFunction = (path) => {
+  const NFTClick = () => {
     setShowAdminToolsMenu(false);
     setShowNFTMenu(!showNFTMenu);
-    setActiveLink(path);
+    // setActiveLink(path);
     // navigate(path);
   };
 
-  const adminToolsFunction = (path) => {
+  const adminToolsClick = () => {
     setShowNFTMenu(false);
     setShowAdminToolsMenu(!adminToolsMenu);
-    setActiveLink(path);
+    // setActiveLink(path);
     // navigate(path);
+  };
+
+  const actionClick = (path) => {
+    setActiveLink(path);
+    navigate(path);
   };
 
   return (
@@ -70,18 +79,15 @@ export function NavBar() {
       <ul className={iconClicked ? "mobileOn" : ""}>
         <li>
           {" "}
-          <div
-            className={`link ${activeLink === "/" ? "active" : ""}`}
-            onClick={() => handleLinkClick("/")}
-          >
+          <div className={classNameFunc("/")} onClick={() => linkClick("/")}>
             Home
           </div>
         </li>
         <li>
           {" "}
           <div
-            className={`link ${activeLink === "/pageTwo" ? "active" : ""}`}
-            onClick={() => handleLinkClick("/pageTwo")}
+            className={classNameFunc("/pageTwo")}
+            onClick={() => linkClick("/pageTwo")}
           >
             Topups
           </div>
@@ -104,34 +110,42 @@ export function NavBar() {
         </li>
         <li>
           {" "}
-          <div
-            className={`link ${activeLink === "/NFTPage" ? "active" : ""}`}
-            onClick={() => NFTFunction("/NFTPage")}
-          >
+          <div className="link" onClick={() => NFTClick()}>
             NFT
             <div className="fa fa-caret-down" />
           </div>
           <div className={showNFTMenu ? "menu-open" : "menu-close"}>
-            <div onClick={() => navigate("/pageTwo")}>action</div>
-            <div onClick={() => navigate("/pageTwo")}>another action</div>
+            <div
+              className={classNameFunc("/actionPage")}
+              onClick={() => actionClick("/actionPage")}
+            >
+              action
+            </div>
+            <div
+              className={classNameFunc("/anotherActionPage")}
+              onClick={() => actionClick("/anotherActionPage")}
+            >
+              another action
+            </div>
           </div>
         </li>
         <li>
           {" "}
-          <div
-            className={`link ${
-              activeLink === "/AdminToolsPage" ? "active" : ""
-            }`}
-            onClick={() => adminToolsFunction("/AdminToolsPage")}
-          >
+          <div className={"link"} onClick={() => adminToolsClick()}>
             Admin Tools
             <div className="fa fa-caret-down" />
           </div>
           <div className={adminToolsMenu ? "menu-open" : "menu-close"}>
-            <div className="menu-option" onClick={() => navigate("/pageTwo")}>
+            <div
+              className={classNameFunc("/actionPage")}
+              onClick={() => actionClick("/actionPage")}
+            >
               action
             </div>
-            <div className="menu-option" onClick={() => navigate("/pageTwo")}>
+            <div
+              className={classNameFunc("/anotherActionPage")}
+              onClick={() => actionClick("/anotherActionPage")}
+            >
               another action
             </div>
           </div>
@@ -141,7 +155,7 @@ export function NavBar() {
           <div onClick={() => navigate("/pageTwo")}>Logout</div>
         </li>
       </ul>
-      <div id="mobile" onClick={handleClick}>
+      <div id="mobile" onClick={iconClick}>
         <i className={iconClicked ? "fas fa-times" : "fas fa-bars"} />
       </div>
     </div>

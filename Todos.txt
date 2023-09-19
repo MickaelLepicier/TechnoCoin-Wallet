@@ -7,6 +7,12 @@ a. NFT & Admin Tools  מסדר את הלשוניות, כולל ה״הובר״
 b. NFT & Admin Tools מסדר את העניין כשזה במצב מובייל
 
 
+TODO for later on : 
+
+- bug in NavBar.js when I press "action" \ "another action"
+    all the "action" \ "another action" becomes Black. it will
+        be fixed when for each button there will be web page
+
 ----------------------------------
 react navBar full project : 
 https://www.youtube.com/watch?v=23BHwAFIZmk
