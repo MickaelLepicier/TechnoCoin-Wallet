@@ -2,7 +2,11 @@ ToDos:
 
 
 1. 
-make the size of the HomePage  on full screen
+
+Dark \ Light Mode:
+- create icon
+- create dark mode toggle 
+
 
 TODO for later on : 
 
