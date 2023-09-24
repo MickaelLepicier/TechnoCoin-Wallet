@@ -6,8 +6,11 @@ import { Footer } from "./components/footer/Footer.js";
 import "./App.css";
 import { ActionPage } from "./pages/actionPage/ActionPage.js";
 import { AnotherActionPage } from "./pages/anotherActionPage/AnotherActionPage.js";
+import { useState } from "react";
 
 function App() {
+  const [darkModeOn, setDarkModeOn] = useState(false);
+
   return (
     <div className="app-container">
       <MenuBar />

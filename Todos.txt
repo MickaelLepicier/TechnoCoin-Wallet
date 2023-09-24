@@ -6,6 +6,10 @@ ToDos:
 Dark \ Light Mode:
 - create icon
 - create dark mode toggle 
+- put the darkModeOn from App.js to MenuBar & Footer
+- create function in the NavBar.scss (if its possible) to change the background-color
+
+
 
 
 TODO for later on : 
