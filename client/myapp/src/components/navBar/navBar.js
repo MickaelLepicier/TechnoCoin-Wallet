@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import "./NavBar.scss";
 import { useState } from "react";
+import { FiSun } from "react-icons/fi";
+import { MdOutlineDarkMode } from "react-icons/md";
 
 /*
 // TODO create a loop to render all that:
@@ -150,6 +152,10 @@ export function NavBar() {
             </div>
           </div>
         </li>
+        <div>
+          <FiSun />
+          <MdOutlineDarkMode />
+        </div>
         <li>
           {" "}
           <div onClick={() => navigate("/pageTwo")}>Logout</div>
