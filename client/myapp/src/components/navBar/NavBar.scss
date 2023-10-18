@@ -74,6 +74,10 @@ display: flex;
       color: black;
     }    
     
+    .darkModeOn{
+      background-color: aliceblue;
+    }
+
     @media screen and (max-width: 1200px ){
 
       ul{
@@ -137,4 +141,17 @@ display: flex;
 
 
 
+/*
 
+body {
+  background-color: #dadada;
+  color: #1f2023;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1f2023;
+    color: #dadada;
+  }
+}
+
+*/

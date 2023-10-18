@@ -42,6 +42,12 @@ export function NavBar() {
   const [showNFTMenu, setShowNFTMenu] = useState(false);
   const [adminToolsMenu, setShowAdminToolsMenu] = useState(false);
 
+  const [darkModeOn, setDarkModeOn] = useState(false);
+
+  const darkModeClick = () => {
+    setDarkModeOn(!darkModeOn);
+  };
+
   const classNameFunc = (str) => {
     return `link ${activeLink === str ? "active" : ""}`;
   };
@@ -74,6 +80,10 @@ export function NavBar() {
   const actionClick = (path) => {
     setActiveLink(path);
     navigate(path);
+  };
+
+  const darkLightMode = () => {
+    return darkModeOn ? <FiSun /> : <MdOutlineDarkMode />;
   };
 
   return (
@@ -152,9 +162,10 @@ export function NavBar() {
             </div>
           </div>
         </li>
-        <div>
-          <FiSun />
-          <MdOutlineDarkMode />
+        <div className={darkModeOn ? "darkModeOn" : ""} onClick={darkModeClick}>
+          {darkLightMode()}
+          {/* <FiSun />
+          <MdOutlineDarkMode /> */}
         </div>
         <li>
           {" "}
