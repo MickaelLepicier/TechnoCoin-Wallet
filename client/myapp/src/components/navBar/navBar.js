@@ -1,8 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import "./NavBar.scss";
 import { useState } from "react";
-import { FiSun } from "react-icons/fi";
-import { MdOutlineDarkMode } from "react-icons/md";
+import DarkMode from "../darkMode/DarkMode";
+// import { FiSun } from "react-icons/fi";
+// import { MdOutlineDarkMode } from "react-icons/md";
 
 /*
 // TODO create a loop to render all that:
@@ -42,11 +43,11 @@ export function NavBar() {
   const [showNFTMenu, setShowNFTMenu] = useState(false);
   const [adminToolsMenu, setShowAdminToolsMenu] = useState(false);
 
-  const [darkModeOn, setDarkModeOn] = useState(false);
+  // const [darkModeOn, setDarkModeOn] = useState(false);
 
-  const darkModeClick = () => {
-    setDarkModeOn(!darkModeOn);
-  };
+  // const darkModeClick = () => {
+  //   setDarkModeOn(!darkModeOn);
+  // };
 
   const classNameFunc = (str) => {
     return `link ${activeLink === str ? "active" : ""}`;
@@ -82,9 +83,9 @@ export function NavBar() {
     navigate(path);
   };
 
-  const darkLightMode = () => {
-    return darkModeOn ? <FiSun /> : <MdOutlineDarkMode />;
-  };
+  // const darkLightMode = () => {
+  //   return darkModeOn ? <FiSun /> : <MdOutlineDarkMode />;
+  // };
 
   return (
     <div className="navBar-container">
@@ -162,11 +163,15 @@ export function NavBar() {
             </div>
           </div>
         </li>
-        <div className={darkModeOn ? "darkModeOn" : ""} onClick={darkModeClick}>
-          {darkLightMode()}
-          {/* <FiSun />
-          <MdOutlineDarkMode /> */}
+        <div>
+          {" "}
+          <DarkMode />{" "}
         </div>
+        {/*<div className={darkModeOn ? "darkModeOn" : ""} onClick={darkModeClick}>
+          {darkLightMode()}
+          { <FiSun />
+          <MdOutlineDarkMode /> }
+        </div>*/}
         <li>
           {" "}
           <div onClick={() => navigate("/pageTwo")}>Logout</div>

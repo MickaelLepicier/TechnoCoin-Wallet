@@ -9,7 +9,7 @@ Dark \ Light Mode:
 - put the darkModeOn from App.js to MenuBar & Footer
 - create function in the NavBar.scss (if its possible) to change the background-color
 
-
+@ show chatGPT all your code and ask for help
 
 
 TODO for later on : 
