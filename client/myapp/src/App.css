@@ -7,8 +7,16 @@
 } 
 
 body{
-  background-color:black
+  background-color:whitesmoke;
+  color: black;
 }
+
+
+body[data-theme="dark"]{
+  background-color:#282c34;
+ color: white;
+}
+
 
 /* .app-container{
   background-color:rgb(182, 176, 176)

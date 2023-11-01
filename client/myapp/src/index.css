@@ -1,22 +1,21 @@
 /* I need to put here all the colors that I wanna change */
 
+/* 
 :root{
   --body_background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);;
   --body_color: white;
   --link-color:navy;
 
-  /* --body_background: white;
-  --body_color: black;
-  --link-color:navy; */
 }
-/* rgba(34,218,255,1) */
 
-[data-theme="dark"]{
+body[data-theme="dark"]{
   --body_background:#282c34;
   --body_color: white;
   --link-color:cyan;
  
-}
+} */
+
+
 
 body {
   margin: 0;

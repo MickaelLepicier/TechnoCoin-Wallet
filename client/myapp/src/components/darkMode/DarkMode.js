@@ -9,7 +9,7 @@ const DarkMode = () => {
   };
 
   const setLightMode = () => {
-    document.body.dataset.theme = "light";
+    document.body.dataset.theme = "";
   };
 
   const toggleTheme = (e) => {
