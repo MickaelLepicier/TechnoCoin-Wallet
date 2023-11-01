@@ -5,6 +5,10 @@ ToDos:
 
 start with HomePage 
 
+check this link to build Crypto Wallet App :
+    https://www.youtube.com/watch?v=1T4mE8_ZKv8&t=124s
+
+
 TODO for later on : 
 
 - bug in NavBar.js when I press "action" \ "another action"
