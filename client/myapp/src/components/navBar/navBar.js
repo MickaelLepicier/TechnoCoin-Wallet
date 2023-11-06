@@ -43,12 +43,6 @@ export function NavBar() {
   const [showNFTMenu, setShowNFTMenu] = useState(false);
   const [adminToolsMenu, setShowAdminToolsMenu] = useState(false);
 
-  // const [darkModeOn, setDarkModeOn] = useState(false);
-
-  // const darkModeClick = () => {
-  //   setDarkModeOn(!darkModeOn);
-  // };
-
   const classNameFunc = (str) => {
     return `link ${activeLink === str ? "active" : ""}`;
   };
@@ -67,25 +61,17 @@ export function NavBar() {
   const NFTClick = () => {
     setShowAdminToolsMenu(false);
     setShowNFTMenu(!showNFTMenu);
-    // setActiveLink(path);
-    // navigate(path);
   };
 
   const adminToolsClick = () => {
     setShowNFTMenu(false);
     setShowAdminToolsMenu(!adminToolsMenu);
-    // setActiveLink(path);
-    // navigate(path);
   };
 
   const actionClick = (path) => {
     setActiveLink(path);
     navigate(path);
   };
-
-  // const darkLightMode = () => {
-  //   return darkModeOn ? <FiSun /> : <MdOutlineDarkMode />;
-  // };
 
   return (
     <div className="navBar-container">
