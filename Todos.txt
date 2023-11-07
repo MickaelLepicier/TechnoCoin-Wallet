@@ -1,7 +1,6 @@
 ToDos:
 
-
-1. 
+1. orginze the Header and the SubHeader
 
 start with HomePage 
 

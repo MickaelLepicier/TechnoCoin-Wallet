@@ -1,0 +1,19 @@
+.buttons-container{
+
+button{
+
+    display: flex;
+    width: 45%;
+    
+    img{
+        width: 20%;
+    }
+    
+    .text{
+        padding:20px;
+        display: block;
+        background-color: aqua;
+    }
+}
+   
+}
