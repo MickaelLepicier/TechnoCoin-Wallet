@@ -3,10 +3,8 @@ import buy_icon from "./buy_icon.png";
 import stake_icon from "./stake_icon.png";
 import swap_icon from "./swap_icon.png";
 
-// I can create another function to render the buttons.
-// Like that it will be less lines of code
-
 function Buttons() {
+  // Data for the buttons in Object
   const btns = [
     {
       icon: buy_icon,
@@ -14,17 +12,17 @@ function Buttons() {
       subHeader: "Buy and sell with trusted providers",
     },
     {
-      icon: stake_icon,
+      icon: swap_icon,
       header: "Swap",
       subHeader: "Convert crypto to crypto securely",
     },
-    { icon: swap_icon, header: "Stake", subHeader: "Grow your crypto" },
+    { icon: stake_icon, header: "Stake", subHeader: "Grow your crypto" },
   ];
 
-  const renderBtn = (icon, header, subHeader) => {
+  const renderBtn = (icon, header, subHeader, index) => {
     return (
-      <button>
-        <img src={icon} alt="buy_icon" />
+      <button key={index}>
+        <img src={icon} alt={`${icon}`} />
         <div className="text">
           <h3> {header} </h3>
           <div> {subHeader} </div>
@@ -34,19 +32,12 @@ function Buttons() {
   };
 
   const renderBtns = () => {
-    return btns.maps((btn) => renderBtn(btn.icon, btn.header, btn.text));
+    return btns.map((btn, index) =>
+      renderBtn(btn.icon, btn.header, btn.subHeader, index)
+    );
   };
 
-  return (
-    <div className="buttons-container">
-      <button>
-        <img src={buy_icon} alt="buy_icon" />
-        <h3> Buy / Sell </h3>
-        <div> Buy and sell with trusted providers </div>
-      </button>
-      {/* {renderBtns()} */}
-    </div>
-  );
+  return <div className="buttons-container">{renderBtns()}</div>;
 }
 
 export default Buttons;

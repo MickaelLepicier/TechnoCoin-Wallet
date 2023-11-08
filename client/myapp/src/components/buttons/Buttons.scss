@@ -1,19 +1,40 @@
 .buttons-container{
-
-button{
-
     display: flex;
-    width: 45%;
-    
+    justify-content: space-around;
+    position: absolute;
+    top: 10%;
+   
+button{
+    display: flex;
+    width: 25%;
+    cursor: pointer;
+    // border-radius: 1.5%;
+    // box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.75);
+    // -webkit-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.75);
+    // -moz-box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.75);
+
     img{
         width: 20%;
     }
     
     .text{
-        padding:20px;
-        display: block;
-        background-color: aqua;
+        text-align: left;
+        margin: auto;  
     }
 }
    
+button:active{
+    font-size: small;
+    img{
+        width: 19%;
+    }
 }
+
+}
+
+body[data-theme="dark"]{
+   button{
+    background-color:#4a4e55;
+    color: white;
+   }
+  }

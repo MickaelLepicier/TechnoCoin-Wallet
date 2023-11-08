@@ -1,6 +1,17 @@
 ToDos:
 
-1. orginze the Header and the SubHeader
+Graph !! :
+
+1. look and learn how to create Graph thru youtube link: 
+
+https://www.youtube.com/watch?v=9DDX3US3kss
+
+and Chat GPT:
+https://chat.openai.com/c/955a2736-3350-4af0-98c0-60226a00b4a2
+
+2. start to create it 
+
+
 
 start with HomePage 
 
