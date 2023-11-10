@@ -2,12 +2,22 @@ ToDos:
 
 Graph !! :
 
-1. look and learn how to create Graph thru youtube link: 
+1. Understand how to create a Graph Chart
+2. Create a graph chart with fake data
+
+I can learn with thous Links:
+
+YouTube:
+look and learn how to create Graph thru youtube link: 
+Time : 1:56
 
 https://www.youtube.com/watch?v=9DDX3US3kss
-
-and Chat GPT:
+ 
+Chat GPT:
 https://chat.openai.com/c/955a2736-3350-4af0-98c0-60226a00b4a2
+
+Another:
+https://canvasjs.com/react-charts/chart-zoom-pan/
 
 2. start to create it 
 
