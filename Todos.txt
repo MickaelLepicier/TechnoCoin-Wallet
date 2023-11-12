@@ -5,11 +5,19 @@ Graph !! :
 1. Understand how to create a Graph Chart
 2. Create a graph chart with fake data
 
+
+
 I can learn with thous Links:
+נסה ללמוד עם יוטיוב ליצור את הגרף 
+לאחר מכן עשה שיבצורים
 
 YouTube:
 look and learn how to create Graph thru youtube link: 
 Time : 1:56
+
+Chat GPT (From 0 to Hero):
+https://chat.openai.com/c/2be6b9bd-618d-48e1-8ea9-a5d1758c16a6
+
 
 https://www.youtube.com/watch?v=9DDX3US3kss
  
@@ -19,7 +27,10 @@ https://chat.openai.com/c/955a2736-3350-4af0-98c0-60226a00b4a2
 Another:
 https://canvasjs.com/react-charts/chart-zoom-pan/
 
-2. start to create it 
+
+
+full project : 
+https://www.youtube.com/watch?v=9KfX7uJ8UdI
 
 
 
