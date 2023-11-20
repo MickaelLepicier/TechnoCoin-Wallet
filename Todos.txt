@@ -5,6 +5,22 @@ Graph !! :
 1. Understand how to create a Graph Chart
 2. Create a graph chart with fake data
 
+-------------------------
+
+for today:
+
+// TODO :
+  // 1. purpel line
+  // 2. purple background
+  // 3. add Total balance
+
+  links:
+  https://www.chartjs.org/docs/latest/charts/line.html
+
+  https://www.youtube.com/watch?v=RF57yDglDfE
+
+
+-------------------------
 
 
 I can learn with thous Links:

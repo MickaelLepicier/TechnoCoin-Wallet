@@ -1,8 +1,29 @@
-import React, { useEffect, useRef } from "react";
-import { Line } from "react-chartjs-2";
-import Chart from "chart.js/auto";
+import "./LineChart.scss";
 
-function Graph() {
+import React from "react";
+import { Line } from "react-chartjs-2";
+import { Chart as ChartJS } from "chart.js/auto";
+
+function LineChart({ btcData }) {
+  // TODO :
+  // 1. purpel line
+  // 2. purple background
+  // 3. add Total balance
+
+  return (
+    <div>
+      <div className="lineChart-container">
+        <Line data={btcData} />
+      </div>
+    </div>
+  );
+}
+
+export default LineChart;
+
+/*
+
+function LineChart() {
   const chartRef = useRef(null);
 
   useEffect(() => {
@@ -22,7 +43,7 @@ function Graph() {
           {
             data: [300, 700, 2000, 5000, 2000, 4000, 2000, 1000, 7000, 100],
             borderColor: "blue",
-            fill: false,
+            fill: true,
           },
         ],
       },
@@ -49,7 +70,8 @@ function Graph() {
   );
 }
 
-export default Graph;
+export default LineChart;
+*/
 
 // const chartData = {
 //   labels: ["January", "February", "March", "April", "May"],
