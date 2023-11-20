@@ -17,6 +17,8 @@ for today:
   links:
   https://www.chartjs.org/docs/latest/charts/line.html
 
+  https://www.w3schools.com/cssref/css_colors.php
+
   https://www.youtube.com/watch?v=RF57yDglDfE
 
 
