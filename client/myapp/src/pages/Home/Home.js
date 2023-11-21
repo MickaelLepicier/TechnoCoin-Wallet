@@ -11,13 +11,41 @@ export function Home() {
       {
         label: "BTC Worth",
         data: BtcData.map((data) => data.btc$),
+
         backgroundColor: ["gold"],
         borderColor: "DarkSlateBlue",
         borderWidth: 2,
         // pointRadius: 0,
+        // borderJoinStyle: "round",
+        tension: 0.2,
+        fill: {
+          target: "origin",
+          above: (context) => {
+            const gradient = context.chart.ctx.createLinearGradient(
+              0,
+              0,
+              0,
+              400
+            );
+            gradient.addColorStop(0, "rgba(71, 61, 139, 0.8)"); // Lighter shade
+            gradient.addColorStop(1, "rgba(71, 61, 139, 0.2)"); // Darker shade
+            return gradient;
+          }, // Area will be DarkSlateBlue above the origin
+          // below: 'rgb(0, 0, 255)'    // And blue below the origin
+        },
       },
     ],
   });
+
+  // const [btcOption, setBtcOption] = useState({
+  //   options: {
+  //     elements: {
+  //       line: {
+  //         tension: 0.4,
+  //       },
+  //     },
+  //   },
+  // });
 
   return (
     <div className="home-container">

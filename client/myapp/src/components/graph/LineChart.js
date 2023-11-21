@@ -4,7 +4,7 @@ import React from "react";
 import { Line } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto";
 
-function LineChart({ btcData }) {
+function LineChart({ btcData, options }) {
   // TODO :
   // 1. purpel line
   // 2. purple background
@@ -13,7 +13,7 @@ function LineChart({ btcData }) {
   return (
     <div>
       <div className="lineChart-container">
-        <Line data={btcData} />
+        <Line data={btcData} options={options} />
       </div>
     </div>
   );

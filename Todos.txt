@@ -10,8 +10,8 @@ Graph !! :
 for today:
 
 // TODO :
-  // 1. purpel line
-  // 2. purple background
+  // 1. צור את הגרף שיהיה לכל אורך המסך וקצת יותר צר
+  // 2. 
   // 3. add Total balance
 
   links:
