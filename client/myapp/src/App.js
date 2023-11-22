@@ -9,7 +9,7 @@ import { AnotherActionPage } from "./pages/anotherActionPage/AnotherActionPage.j
 import { useState } from "react";
 
 function App() {
-  const [darkModeOn, setDarkModeOn] = useState(false);
+  // const [darkModeOn, setDarkModeOn] = useState(false);
 
   return (
     <div className="app-container">

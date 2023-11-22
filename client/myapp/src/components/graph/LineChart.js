@@ -6,8 +6,8 @@ import { Chart as ChartJS } from "chart.js/auto";
 
 function LineChart({ btcData, options }) {
   // TODO :
-  // 1. purpel line
-  // 2. purple background
+  // 1.
+  // 2.
   // 3. add Total balance
 
   return (

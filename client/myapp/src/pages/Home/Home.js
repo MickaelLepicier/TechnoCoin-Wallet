@@ -18,6 +18,8 @@ export function Home() {
         // pointRadius: 0,
         // borderJoinStyle: "round",
         tension: 0.2,
+        // hoverBorderWidth: "200px",
+
         fill: {
           target: "origin",
           above: (context) => {
