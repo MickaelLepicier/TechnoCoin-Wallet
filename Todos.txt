@@ -11,7 +11,9 @@ for today:
 
 // TODO :
   // 1. צור את הגרף שיהיה לכל אורך המסך וקצת יותר צר
-  // 2. 
+  // Read this page and keep searching for an answer: 
+  https://www.chartjs.org/docs/latest/configuration/responsive.html
+  
   // 3. add Total balance
 
   links:
