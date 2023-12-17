@@ -2,10 +2,12 @@ import { useState } from "react";
 import Buttons from "../../components/buttons/Buttons";
 import LineChart from "../../components/graph/LineChart";
 import { BtcData } from "../../data/BtcData";
-import "./Home.css";
+import "./Home.scss";
+import { Balance } from "../../components/balance/Balance";
 
 export function Home() {
   const [btc, setBtc] = useState({
+    // TODO change the Data (BtcData) thro the buttons D1 , W1 ...
     labels: BtcData.map((data) => data.year),
     datasets: [
       {
@@ -39,23 +41,12 @@ export function Home() {
     ],
   });
 
-  // const [btcOption, setBtcOption] = useState({
-  //   options: {
-  //     elements: {
-  //       line: {
-  //         tension: 0.4,
-  //       },
-  //     },
-  //   },
-  // });
-
   return (
     <div className="home-container">
       {/* <h2>HomePage</h2> */}
       <Buttons />
+      <Balance />
       <LineChart btcData={btc} />
     </div>
   );
 }
-
-// export default Home;

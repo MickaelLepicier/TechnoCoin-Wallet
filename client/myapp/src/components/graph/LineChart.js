@@ -5,13 +5,9 @@ import { Line } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto";
 
 function LineChart({ btcData, options }) {
-  // TODO :
-  // 1.
-  // 2.
-  // 3. add Total balance
-
   return (
     <div>
+     
       <div className="lineChart-container">
         <Line data={btcData} options={options} />
       </div>
