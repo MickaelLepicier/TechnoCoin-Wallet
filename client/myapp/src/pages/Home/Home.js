@@ -3,7 +3,48 @@ import Buttons from "../../components/buttons/Buttons";
 import LineChart from "../../components/graph/LineChart";
 import { BtcData } from "../../data/BtcData";
 import "./Home.scss";
-import { Balance } from "../../components/balance/Balance";
+// import { Balance } from "../../components/balance/Balance";
+
+function Balance() {
+  return (
+    <div className="balance-container">
+      <div className="balance">
+        $10,000,000 <br />
+        <div className="total-b">total Balance </div>
+        <div className="growth">90%</div>
+      </div>
+      <div className="chart-buttons">
+        <button className="btn">1D</button>
+        <button className="btn">1W</button>
+        <button className="btn">1M</button>
+        <button className="btn">1Y</button>
+        <button className="btn">All</button>
+      </div>
+    </div>
+  );
+}
+
+function AssetsAllocation(assetsNums = 5, data) {
+  //@ TODO create assets allocation
+  // 1. Assets allocation(assetsNums) + icon
+
+  //1.1 Icon link: ( arrow down \ double down)
+  // https://icons8.com/icons/set/double-down
+
+  // 2. when pressed the component is open and shown the:
+  //    Assets , Price, Allocation, Amount, Value.
+
+  // the data is from the State
+
+  return (
+    <div className="assetsAllocation-container">
+      <div className="aa-header">
+        Assets allocation(5)
+        <i class="fa-solid fa-arrow-down-to-line" />
+      </div>
+    </div>
+  );
+}
 
 export function Home() {
   const [btc, setBtc] = useState({
@@ -45,8 +86,13 @@ export function Home() {
     <div className="home-container">
       {/* <h2>HomePage</h2> */}
       <Buttons />
-      <Balance />
-      <LineChart btcData={btc} />
+      <div className="graph-container">
+        <Balance />
+        <LineChart btcData={btc} />
+      </div>
+      <div className="assets-container">
+        <AssetsAllocation />
+      </div>
     </div>
   );
 }
