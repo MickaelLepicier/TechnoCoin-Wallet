@@ -5,7 +5,8 @@ display: flex;
     ul{
       display: flex;
       align-items: center;
-      justify-content:right;
+      // justify-content:right;
+      justify-content: space-between;
     }
     li{
       list-style-type: none;

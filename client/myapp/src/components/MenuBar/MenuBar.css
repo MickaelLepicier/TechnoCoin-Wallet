@@ -2,7 +2,10 @@
     display: flex;
     align-items: center;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-    justify-content: space-between;
-    height: 90px;
+  
+    /* justify-content: center; */
+    /* height: 90px; */
     /* box-shadow: rgba(149, 157, 165, 0.526) 0px 8px 24px; */
   }
+
+  /* מסדר את עניין המניו באר שיהיה מסודר ויפה TODO */

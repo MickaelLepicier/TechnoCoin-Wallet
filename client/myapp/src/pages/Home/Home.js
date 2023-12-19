@@ -10,7 +10,7 @@ function Balance() {
     <div className="balance-container">
       <div className="balance">
         $10,000,000 <br />
-        <div className="total-b">total Balance </div>
+        <div className="total-b">Total balance </div>
         <div className="growth">90%</div>
       </div>
       <div className="chart-buttons">
@@ -84,7 +84,6 @@ export function Home() {
 
   return (
     <div className="home-container">
-      {/* <h2>HomePage</h2> */}
       <Buttons />
       <div className="graph-container">
         <Balance />
