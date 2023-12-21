@@ -39,8 +39,8 @@ function AssetsAllocation(assetsNums = 5, data) {
   return (
     <div className="assetsAllocation-container">
       <div className="aa-header">
-        Assets allocation(5)
-        <i class="fa-solid fa-arrow-down-to-line" />
+        Assets allocation(5) <div className="fa fa-caret-down" />
+        {/* <i class="fa-solid fa-arrow-down-to-line" /> */}
       </div>
     </div>
   );
