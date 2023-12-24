@@ -1,11 +1,10 @@
 .navBar-container{
-// TODO ראיתי שהכפתורים נהיים קטניפ יותר 
-// כשהמסך נהיה קטן אז לעשות שזה יקרה גם 
-// ב menu-bar 
-      display: flex;
+
+
+      // display: flex;
 
       // padding: 3% 5%;
-      width: 70%;
+      // width: 70%;
 
       // justify-content:right;
       
@@ -22,24 +21,29 @@
 
         // border: solid rgb(89, 255, 0) 3px;
 
-        // width: 100%;
-
+        min-width: 93vw;
+        height: 8vh;
         // border: solid yellowgreen;
-
+        // margin-left: 25%;
 
     }
     li{
       list-style-type: none;
-      padding: 2% 5%;
+      // padding: 2% 5%;
+      padding: 1% 2%;
+      // margin-right: 3%;
       border-radius: 10px;
       position: relative;
       color: white;
       cursor: pointer;
       transition: 0.3s ease-in-out;
       font-size: large;
+      // font-size: 1vw;
       font-family: sans-serif;
+
+     
     }
-    
+
     li:hover{
       background-color: rgba(255, 255, 255, 0.592);
       color: greenyellow;
@@ -48,6 +52,9 @@
     li div.active{
       color: greenyellow;
     }
+    // TODO the window that open on the click
+    //      make it to be align with the button
+    
     li:hover::after,
     li div.active::after{
       width: 30%;
@@ -67,6 +74,22 @@
       padding:5px;
     }
 
+   
+
+    .dark-mode{
+      // margin-left: 9rem;
+      // margin-right:1.5%;
+    margin-left: auto;
+    // width: 50%;
+      // margin: 0rem 0.5rem 0rem 5rem
+      // float: right;
+    }
+
+    .logout{
+      margin-right:0%;
+      padding: 2% 3.5% 2% 3.5%;
+    }
+
     #mobile {
       display: none;
     }
@@ -74,12 +97,16 @@
     .menu-close{
       display: none;
      }
+      // TODO the window that open on the click
+      //      make it to be align with the button
+      //      + make it over the 3 buttons
+    
     .menu-open{
       display: block;
       background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,135,255,1) 0%, rgba(58,184,255,1) 35%, rgba(34,218,255,1) 100%);
       color: white;
       position: fixed;
-      top: 90px;
+      top: 77px;
       padding: 1%;
       transition: 0.3s ease-in-out;
       border-radius:0 0 10px 10px;
@@ -99,7 +126,7 @@
       background-color: aliceblue;
     }
 
-    @media screen and (max-width: 1280px ){
+    @media screen and (max-width: 1420px ){
 
       ul{
         display: flex;

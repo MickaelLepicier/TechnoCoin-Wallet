@@ -149,7 +149,8 @@ export function NavBar() {
             </div>
           </div>
         </li>
-        <div>
+
+        <div className="dark-mode">
           {" "}
           <DarkMode />{" "}
         </div>
@@ -158,7 +159,7 @@ export function NavBar() {
           { <FiSun />
           <MdOutlineDarkMode /> }
         </div>*/}
-        <li>
+        <li className="logout">
           {" "}
           <div onClick={() => navigate("/pageTwo")}>Logout</div>
         </li>
