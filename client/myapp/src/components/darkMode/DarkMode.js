@@ -17,6 +17,9 @@ const DarkMode = () => {
     else setLightMode();
   };
 
+  // Delete this for the Dark & Light mode to work
+  setDarkMode();
+
   return (
     <div className="dark_mode">
       <input

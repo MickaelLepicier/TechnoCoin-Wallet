@@ -4,6 +4,11 @@
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
   
     width: 100%;
+
+    position: relative; /* Ensure that the position is relative for z-index to work */
+    z-index: 1; /* Set a higher z-index value */
+
+
     /* border: solid red 3px; */
 
     /* justify-content:space-around; */
