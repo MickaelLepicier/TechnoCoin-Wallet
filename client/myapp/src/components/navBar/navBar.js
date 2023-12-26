@@ -56,6 +56,8 @@ export function NavBar() {
 
   const iconClick = () => {
     setIconClicked(!iconClicked);
+    setShowNFTMenu(false);
+    setShowAdminToolsMenu(false);
   };
 
   const NFTClick = () => {
@@ -164,7 +166,7 @@ export function NavBar() {
           <div onClick={() => navigate("/pageTwo")}>Logout</div>
         </li>
       </ul>
-      <div id="mobile" onClick={iconClick}>
+      <div id="mobile-icon" onClick={iconClick}>
         <i className={iconClicked ? "fas fa-times" : "fas fa-bars"} />
       </div>
     </div>

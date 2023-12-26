@@ -87,10 +87,10 @@
 
     .logout{
       margin-right:0%;
-      padding: 2% 3.5% 2% 3.5%;
+      padding: 1% 2% 1% 2%;
     }
 
-    #mobile {
+    #mobile-icon {
       display: none;
     }
 
@@ -103,7 +103,7 @@
       background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,135,255,1) 0%, rgba(58,184,255,1) 99%, rgba(34,218,255,1) 100%);
       color: white;
       position: fixed;
-      top: 77px;
+      top: 70px;
       padding: 1.8%;
       transition: 0.3s ease-in-out;
       border-radius:0 0 10px 10px;
@@ -131,9 +131,8 @@
 
     @media screen and (max-width: 1420px ){
 
-      // TODO the ul that open on the click
-      //      make it to be align with the screen
-      
+      // TODO arrange the Footer
+      //      maybe put the menu height a bit bigger
     
       ul{
         display: flex;
@@ -141,10 +140,10 @@
         align-items: flex-start;
         justify-content:flex-start;
         position: fixed;
-        top: 49.4px;
+        top: 54px;
         // top: 8rem;
-        right:-310px;
-        min-width: 300px;
+        right:-210px;
+        min-width: 200px;
         height:100vh;
         background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,135,255,1) 0%, rgba(58,184,255,1) 35%, rgba(34,218,255,1) 100%);
         padding: 40px 0 0 10px;
@@ -152,39 +151,52 @@
 
 
       }
-
+// 50px
       ul.mobileOn{
         right:0px;
       }
 
       li{
-        margin-bottom: 10%;
+        padding: 5%;
+        margin-bottom: 4vh;
       }
 
-      #mobile {
+      .dark-mode{
+      margin: 13vh 0vh 2vh -0.7vh;
+    }
+
+      #mobile-icon {
         display: block;
         cursor: pointer;
         margin-right: 30px;
       }
-      #mobile i{
+      #mobile-icon i{
         color: white;
-        font-size: 25px;
+        font-size: 20px;
       }
 
       .menu-close{
         display: none;
+        
        }
       .menu-open{
-        display: block;
-        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,135,255,0) 0%, rgba(58,184,255,0) 35%, rgba(34,218,255,0) 100%);
-        color: white;
+        // display: block;
+        // background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,135,255,0) 0%, rgba(58,184,255,0) 35%, rgba(34,218,255,0) 100%);
+        // color: white;
         position: initial;
         transition: 0.3s ease-in-out;
         border-radius:0 0 10px 10px;
+        border-radius: 10px 0px 0px 10px;
+        position: fixed;
+        right: 16.3vw;
+        top: 58.5vh;
       }
   
       .menu-open div{
         padding: 5%;
+        // display: block;
+        // position: absolute;
+        // right: 17vw;
       }
   
       .menu-open div:hover{
