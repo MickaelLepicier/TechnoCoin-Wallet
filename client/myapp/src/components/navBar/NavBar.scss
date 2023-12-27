@@ -131,16 +131,13 @@
 
     @media screen and (max-width: 1420px ){
 
-      // TODO arrange the Footer
-      //      maybe put the menu height a bit bigger
-    
       ul{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content:flex-start;
         position: fixed;
-        top: 54px;
+        top: 70px;
         // top: 8rem;
         right:-210px;
         min-width: 200px;
@@ -162,7 +159,7 @@
       }
 
       .dark-mode{
-      margin: 13vh 0vh 2vh -0.7vh;
+      margin: 12vh 0vh 2vh -0.7vh;
     }
 
       #mobile-icon {

@@ -9,6 +9,12 @@
   // width:80vw;
   // border: solid black ;
   justify-content: center;
+
+
+@media screen and (max-width: 820px ){
+// TODO design the scroll to look better
+overflow:scroll;
+}
   }
 
 
