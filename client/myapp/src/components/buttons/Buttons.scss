@@ -42,8 +42,9 @@ button:active{
 
     button{
         display: grid;
-        width: 110px;
-        height: 105px;
+        // width: 110px;
+        // height: 105px;
+        width: 10%;
         justify-content: center;
         border-radius: 10px;
         margin: 0 5%;
@@ -53,7 +54,8 @@ button:active{
 
         h3{
         margin: 10% 0;  
-        font-size: 20px;  
+        // font-size: 20px; 
+        font-size: 180%; 
             }
 
         div{
@@ -62,7 +64,8 @@ button:active{
     }
     
     img{
-        width: 60px;
+        // width: 60px;
+        width: 65%;
         margin: auto;
     }
 }
