@@ -15,4 +15,16 @@
     /* justify-content:space-around; */
     /* height: 90px; */
     /* box-sßhadow: rgba(149, 157, 165, 0.526) 0px 8px 24px; */
+  
+  
+@media screen and (max-width: 820px ){
+  
+  height: 2.5rem;
+
+}
+  
+  
   }
+
+
+

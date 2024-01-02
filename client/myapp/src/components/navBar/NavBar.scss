@@ -1,6 +1,4 @@
 .navBar-container{
-
-
       // display: flex;
 
       // padding: 3% 5%;
@@ -43,7 +41,6 @@
       // font-size: 1vw;
       font-family: sans-serif;
 
-     
     }
 
     li:hover{
@@ -145,8 +142,6 @@
         background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,135,255,1) 0%, rgba(58,184,255,1) 35%, rgba(34,218,255,1) 100%);
         padding: 40px 0 0 10px;
         transition: 0.3s ease-in-out;
-
-
       }
 // 50px
       ul.mobileOn{
@@ -176,6 +171,7 @@
         display: none;
         
        }
+       
       .menu-open{
         // display: block;
         // background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,135,255,0) 0%, rgba(58,184,255,0) 35%, rgba(34,218,255,0) 100%);
@@ -202,6 +198,21 @@
         color: black;
       }    
     }
+
+@media screen and (max-width: 820px ){
+
+    #mobile-icon i{
+      color: white;
+      font-size: 1rem;
+    }
+  }
+
+ul{
+  top: 40px;
+  min-width: 150px;
+}
+
+
   }
 
 
