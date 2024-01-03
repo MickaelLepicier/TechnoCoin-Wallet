@@ -1,43 +1,21 @@
 .navBar-container{
-      // display: flex;
-
-      // padding: 3% 5%;
-      // width: 70%;
-
-      // justify-content:right;
-      
-      
-      // border: solid rgb(255, 213, 0) 3px;
-      
-      // margin-left: 10%;
-      
       ul{
         display: flex;
         align-items: center;
-        // justify-content:right;
-        // justify-content: space-between;
-
-        // border: solid rgb(89, 255, 0) 3px;
-
         min-width: 93vw;
-        height: 70px;
-
-        // height: 7.5vh;
-        // border: solid yellowgreen;
-        // margin-left: 25%;
-
+        // height: 70px;
     }
     li{
       list-style-type: none;
-      // padding: 2% 5%;
       padding: 1% 2%;
-      // margin-right: 3%;
+      margin-right: 0.5%;
       border-radius: 10px;
       position: relative;
       color: white;
       cursor: pointer;
       transition: 0.3s ease-in-out;
-      font-size: large;
+      font-size: clamp(100%,110%, 200%);
+      // font-size: 110%;
       // font-size: 1vw;
       font-family: sans-serif;
 
@@ -71,8 +49,6 @@
       padding:5px;
     }
 
-   
-
     .dark-mode{
       // margin-left: 9rem;
       // margin-right:1.5%;
@@ -100,7 +76,7 @@
       background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,135,255,1) 0%, rgba(58,184,255,1) 99%, rgba(34,218,255,1) 100%);
       color: white;
       position: fixed;
-      top: 70px;
+      top: 8%;
       padding: 1.8%;
       transition: 0.3s ease-in-out;
       border-radius:0 0 10px 10px;
@@ -126,6 +102,8 @@
       background-color: aliceblue;
     }
 
+// ------------------------------------------------------------------------------------
+
     @media screen and (max-width: 1420px ){
 
       ul{
@@ -134,11 +112,12 @@
         align-items: flex-start;
         justify-content:flex-start;
         position: fixed;
-        top: 70px;
+        // top: clamp(6%,8.1%,9%);
+        margin-top:clamp(3%,3% + 2%,10%);
         // top: 8rem;
         right:-210px;
         min-width: 200px;
-        height:100vh;
+        // height:100vh;
         background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,135,255,1) 0%, rgba(58,184,255,1) 35%, rgba(34,218,255,1) 100%);
         padding: 40px 0 0 10px;
         transition: 0.3s ease-in-out;
@@ -197,21 +176,39 @@
         background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,135,255,1) 0%, rgba(58,184,255,1) 35%, rgba(34,218,255,1) 100%);
         color: black;
       }    
+     
     }
 
-@media screen and (max-width: 820px ){
+// ------------------------------------------------------------------------------------
 
+
+@media screen and (max-width: 820px ){
+/*
     #mobile-icon i{
       color: white;
       font-size: 1rem;
     }
+
+    ul{
+      top: 40px;
+      min-width: 150px;
+    }
+
+*/
   }
 
-ul{
-  top: 40px;
-  min-width: 150px;
-}
 
+// don't use fixed width \ height.
+// Its better not to use height 
+
+// instead of width - right : max-width:
+// instead of height - right : min-height:
+
+// @media use just min-width :40em
+
+// font-size: clamp(3rem,1rem + 10vw, 5rem)
+
+// 320px width is the smallest phone
 
   }
 
