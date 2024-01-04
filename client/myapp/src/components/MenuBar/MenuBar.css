@@ -9,7 +9,7 @@
     for all the screen sizes 
     */
     
-    min-height:8vh;
+    height:8vh;
     /* height: 70px; */
     position: relative; /* Ensure that the position is relative for z-index to work */
     z-index: 1; /* Set a higher z-index value */
@@ -22,11 +22,12 @@
     /* height: 90px; */
     /* box-sßhadow: rgba(149, 157, 165, 0.526) 0px 8px 24px; */
   
-  
+
+
 @media screen and (max-width: 820px ){
   
-  /* height: 2.5rem; */
-
+  height: 6vh;
+  
 }
   
   
