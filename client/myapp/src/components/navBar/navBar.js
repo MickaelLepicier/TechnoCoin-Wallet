@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import "./NavBar.scss";
 import { useState } from "react";
 import DarkMode from "../darkMode/DarkMode";
+import "./NavBar.scss";
 // import { FiSun } from "react-icons/fi";
 // import { MdOutlineDarkMode } from "react-icons/md";
 

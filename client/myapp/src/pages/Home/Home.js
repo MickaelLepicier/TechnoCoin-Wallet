@@ -43,7 +43,7 @@ function AssetsAllocation(assetsNums = 5, data) {
     return (
       <div>
         <table>
-          <thead className="table-header">
+          <thead>
             <tr>
               <th>Asset</th>
               <th>Price</th>
