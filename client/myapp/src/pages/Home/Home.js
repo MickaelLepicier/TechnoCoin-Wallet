@@ -36,47 +36,53 @@ function AssetsAllocation(assetsNums = 5, data) {
 
   // the data is from the State
 
+  const toggleAssetsData = () => {
+    var element = document.querySelector(".assets-data");
+    element.classList.toggle("active");
+  };
+
   const renderAssets = (data) => {
     // take the data and use it to render it.
 
     // find another way to create Table
     return (
-      <div>
-        <table>
-          <thead>
-            <tr>
-              <th>Asset</th>
-              <th>Price</th>
-              <th>Allocation</th>
-              <th>Amount</th>
-              <th>Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>TechnoCoin</td>
-              <td>$1.00</td>
-              <td>50.04% </td>
-              <td>999,999,999 TC </td>
-              <td>999,999,999$</td>
-            </tr>
-            <tr>
-              <td>BitCoin</td>
-              <td>$25,923.00</td>
-              <td>50.04% </td>
-              <td>999,999,999 TC </td>
-              <td>999,999,999$</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <table className="assets-data">
+        <thead>
+          <tr>
+            <th>Asset</th>
+            <th>Price</th>
+            <th>Allocation</th>
+            <th>Amount</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>TechnoCoin</td>
+            <td>$1.00</td>
+            <td>50.04% </td>
+            <td>999,999,999 TC </td>
+            <td>999,999,999$</td>
+          </tr>
+          <tr>
+            <td>BitCoin</td>
+            <td>$25,923.00</td>
+            <td>50.04% </td>
+            <td>999,999,999 TC </td>
+            <td>999,999,999$</td>
+          </tr>
+        </tbody>
+      </table>
     );
   };
 
   return (
     <div className="assetsAllocation-container">
-      <div className="aa-header">
-        Assets allocation(5) :{/* <div className="fa fa-caret-down" /> */}
+      <div className="aa-header" onClick={() => toggleAssetsData()}>
+        Assets allocation(5) :
+        <div className="icon-down">
+          <div className="fa fa-caret-down" />{" "}
+        </div>
       </div>
 
       <div>{renderAssets()}</div>
