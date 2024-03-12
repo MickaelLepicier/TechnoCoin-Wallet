@@ -114,7 +114,7 @@
         align-items: flex-start;
         justify-content:flex-start;
         position: fixed;
-        top: 8%;
+        top:8vh;
         // top: clamp(3%,8%,10%);
         // margin-top:clamp(3%,3%,10%);
         // top: 8rem;
@@ -170,6 +170,7 @@
         top: 65vh;
 
         div{
+          width: 90%;
           padding: 5%;
           // display: block;
           // position: absolute;
@@ -177,9 +178,10 @@
         }
 
         div:hover{
+          
           border-radius: 10px;
           background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(57,135,255,1) 0%, rgba(58,184,255,1) 35%, rgba(34,218,255,1) 100%);
-          color: black;
+          // color: black;
         }    
       }
   
@@ -214,14 +216,6 @@
       width: 13vw;
       right: 32vw;
       top: 55vh;
-//TODO:
-      // fix the top to be dynamic
-      // fix the Copyright to be dynamic
-      // fix the "another action" background when its active , and on 350PX
-      
-      // div{
-      //   padding: 5% 10%;
-      // }
     }
 
     

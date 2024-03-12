@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import DarkMode from "../darkMode/DarkMode";
 import "./NavBar.scss";
 // import { FiSun } from "react-icons/fi";
@@ -75,8 +75,40 @@ export function NavBar() {
     navigate(path);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      // This function work each time we scroll..
+      // maybe there is a way for it to work less
+      // console.log("xxx");
+      const currentPosition = window.pageYOffset;
+      if (currentPosition > 0) {
+        setIconClicked(false);
+      }
+    };
+
+    const handleClick = () => {
+      //TODO
+      // I need to do something here to make it work
+      // by clicking on the screen the menu will be closed
+      console.log(iconClicked);
+
+      if (iconClicked) setIconClicked(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    document.addEventListener("click", handleClick);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("click", handleClick);
+    };
+  }, []);
+
   return (
     <div className="navBar-container">
+      {/* <div id="mobile-icon" onClick={iconClick}> */}
+      {/* <i className={iconClicked ? "fas fa-times" : "fas fa-bars"} /> */}
+      {/* </div> */}
       <ul className={iconClicked ? "mobileOn" : ""}>
         <li>
           {" "}
