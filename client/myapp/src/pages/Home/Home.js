@@ -26,13 +26,10 @@ function Balance() {
 
 function AssetsAllocation(assetsNums = 5, data) {
   //@ TODO create assets allocation
-  // 1. Assets allocation(assetsNums) + icon
 
-  //1.1 Icon link: ( arrow down \ double down)
-  // https://icons8.com/icons/set/double-down
-
-  // 2. when pressed the component is open and shown the:
-  //    Assets , Price, Allocation, Amount, Value.
+  // 1. The Assets allocation going down like in the NavBar NFT
+  // 2. After I click the background change back
+  // 3. how when I click the screen the background change it back?
 
   // the data is from the State
 

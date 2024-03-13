@@ -35,14 +35,14 @@ function renderNavBarList(navigate) {
 
 */
 
-export function NavBar() {
+export function NavBar({ menuRef }) {
   const navigate = useNavigate();
   const [iconClicked, setIconClicked] = useState(false);
   const [activeLink, setActiveLink] = useState("/");
 
   const [showNFTMenu, setShowNFTMenu] = useState(false);
   const [adminToolsMenu, setShowAdminToolsMenu] = useState(false);
-  const menuRef = useRef(null);
+  // const menuRef = useRef(null);
 
   const classNameFunc = (str) => {
     return `link ${activeLink === str ? "active" : ""}`;
@@ -80,34 +80,19 @@ export function NavBar() {
     const handleScroll = () => {
       // This function work each time we scroll..
       // maybe there is a way for it to work less
-      // console.log("xxx");
+
       const currentPosition = window.pageYOffset;
       if (currentPosition > 0) {
         setIconClicked(false);
+        setShowNFTMenu(false);
+        setShowAdminToolsMenu(false);
       }
     };
 
     const handleClick = (event) => {
-      //TODO
-      // I need to do something here to make it work
-      // by clicking on the screen the menu will be closed
-
-      // console.log(iconClicked);
-
-      if (!menuRef.current.contains(event.target)) {
-        console.log("yes");
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIconClicked(false);
       }
-
-      // The problem is with this : "!menuRef.current.contains(event.target)"
-      // I need to do that when I click the menu (ul) AND when
-      // I click the the Top bar so It wont close it
-
-      // I WILL DO IT THIS WAY - EVERY TIME I CLICK ON THE PAGE ITSELF (NOT THE TOP OR THE FOOTER)
-      // SO IT WILL CLOSE THE MENU.
-
-      // if (menuRef.current && !menuRef.current.contains(event.target)) {
-      //   setIconClicked(false);
-      // }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -119,14 +104,9 @@ export function NavBar() {
     };
   }, []);
 
-  // console.log(iconClicked);
-
   return (
     <div className="navBar-container">
-      {/* <div id="mobile-icon" onClick={iconClick}> */}
-      {/* <i className={iconClicked ? "fas fa-times" : "fas fa-bars"} /> */}
-      {/* </div> */}
-      <ul className={iconClicked ? "mobileOn" : ""} ref={menuRef}>
+      <ul className={iconClicked ? "mobileOn" : ""}>
         <li>
           {" "}
           <div className={classNameFunc("/")} onClick={() => linkClick("/")}>
@@ -205,11 +185,7 @@ export function NavBar() {
           {" "}
           <DarkMode />{" "}
         </div>
-        {/*<div className={darkModeOn ? "darkModeOn" : ""} onClick={darkModeClick}>
-          {darkLightMode()}
-          { <FiSun />
-          <MdOutlineDarkMode /> }
-        </div>*/}
+
         <li className="logout">
           {" "}
           <div onClick={() => navigate("/pageTwo")}>Logout</div>
