@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import DarkMode from "../darkMode/DarkMode";
 import "./NavBar.scss";
 // import { FiSun } from "react-icons/fi";
@@ -42,6 +42,7 @@ export function NavBar() {
 
   const [showNFTMenu, setShowNFTMenu] = useState(false);
   const [adminToolsMenu, setShowAdminToolsMenu] = useState(false);
+  const menuRef = useRef(null);
 
   const classNameFunc = (str) => {
     return `link ${activeLink === str ? "active" : ""}`;
@@ -86,13 +87,27 @@ export function NavBar() {
       }
     };
 
-    const handleClick = () => {
+    const handleClick = (event) => {
       //TODO
       // I need to do something here to make it work
       // by clicking on the screen the menu will be closed
-      console.log(iconClicked);
 
-      if (iconClicked) setIconClicked(false);
+      // console.log(iconClicked);
+
+      if (!menuRef.current.contains(event.target)) {
+        console.log("yes");
+      }
+
+      // The problem is with this : "!menuRef.current.contains(event.target)"
+      // I need to do that when I click the menu (ul) AND when
+      // I click the the Top bar so It wont close it
+
+      // I WILL DO IT THIS WAY - EVERY TIME I CLICK ON THE PAGE ITSELF (NOT THE TOP OR THE FOOTER)
+      // SO IT WILL CLOSE THE MENU.
+
+      // if (menuRef.current && !menuRef.current.contains(event.target)) {
+      //   setIconClicked(false);
+      // }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -104,12 +119,14 @@ export function NavBar() {
     };
   }, []);
 
+  // console.log(iconClicked);
+
   return (
     <div className="navBar-container">
       {/* <div id="mobile-icon" onClick={iconClick}> */}
       {/* <i className={iconClicked ? "fas fa-times" : "fas fa-bars"} /> */}
       {/* </div> */}
-      <ul className={iconClicked ? "mobileOn" : ""}>
+      <ul className={iconClicked ? "mobileOn" : ""} ref={menuRef}>
         <li>
           {" "}
           <div className={classNameFunc("/")} onClick={() => linkClick("/")}>
