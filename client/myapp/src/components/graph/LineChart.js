@@ -7,7 +7,6 @@ import { Chart as ChartJS } from "chart.js/auto";
 function LineChart({ btcData, options }) {
   return (
     <div>
-     
       <div className="lineChart-container">
         <Line data={btcData} options={options} />
       </div>

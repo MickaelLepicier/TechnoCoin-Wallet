@@ -25,19 +25,14 @@ function Balance() {
 }
 
 function AssetsAllocation(assetsNums = 5, data) {
-  //@ TODO create assets allocation
+  // @ Click Down Fitcher :
 
-  // 1. The Assets allocation going down like in the NavBar NFT
-  // 2. After I click the background change back
-  // 3. how when I click the screen the background change it back?
+  // const toggleAssetsData = () => {
+  //   var element = document.querySelector(".assets-data");
+  //   element.classList.toggle("active");
+  // };
 
   // the data is from the State
-
-  const toggleAssetsData = () => {
-    var element = document.querySelector(".assets-data");
-    element.classList.toggle("active");
-  };
-
   const renderAssets = (data) => {
     // take the data and use it to render it.
 
@@ -75,11 +70,14 @@ function AssetsAllocation(assetsNums = 5, data) {
 
   return (
     <div className="assetsAllocation-container">
-      <div className="aa-header" onClick={() => toggleAssetsData()}>
-        Assets allocation(5) :
+      <div className="aa-header">
+        {/*  // @Click Down Fitcher :
+      <div className="aa-header" onClick={() => toggleAssetsData()}> */}
+        Assets allocation(5)
+        {/* @ Click Down Fitcher :
         <div className="icon-down">
           <div className="fa fa-caret-down" />{" "}
-        </div>
+        </div> */}
       </div>
 
       <div>{renderAssets()}</div>

@@ -25,6 +25,7 @@ background-color: rgba(128, 128, 128, 0.158);
 border-radius: 0.5%;
 padding: 1.5%;
 
+
 box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.49);
 -webkit-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.49);
 -moz-box-shadow: 0px 0px 15px 2px rgba(0,0,0,0.49);
@@ -128,8 +129,10 @@ margin-top: 5%;
 
     .assets-container{
         width: 70%;
-        margin-top: 2%;
+        margin-top:2%;
         // padding: 0.5%;
+
+
 
         background-color: rgba(128, 128, 128, 0.158);
         border-radius: 0.5%;
@@ -143,10 +146,11 @@ margin-top: 5%;
          padding: 1%;
         }
 
-        .icon-down{
-         display: none;
-         // padding-left: 1%;
-        }
+        // @ Click Down Fitcher :
+        // .icon-down{
+        //  display: none;
+        //  // padding-left: 1%;
+        // }
 
         table{
           width: 100%;
@@ -168,31 +172,38 @@ margin-top: 5%;
       }
 
       @media screen and (max-width: 1420px ){ 
-        .aa-header:hover{
-          cursor: pointer;
-          background-color: aquamarine;
-          transition: 0.6s;
-        }
+       
+          margin-bottom:2%;
+          
+        
 
-        .icon-down{
-          display: block;
-          padding-left: 1%;
-         }
-         // TODO when I click on the Assets allocation 
-         // the data is going down as the NavBar
-         // Check inside NavBar how its working and maybe
-         // do the same
+
+       // @ Click Down Fitcher :
+        // .aa-header:hover{
+        //   cursor: pointer;
+        //   background-color: aquamarine;
+        //   transition: 0.6s;
+        // }
+
+         // @ Click Down Fitcher :
+        // .icon-down{
+        //   display: block;
+        //   padding-left: 1%;
+        //  }
+
+        
 
          
+ // @Click Down Fitcher :
 
-         .assets-data{
-          display: none;
-         }
+        //  .assets-data{
+        //   display: none;
+        //  }
 
-         .active{
-          display: block;
-          // background-color: black;
-         }
+        //  .active{
+        //   display: block;
+        //   // background-color: black;
+        //  }
 
       }
 
