@@ -69,7 +69,8 @@ function AssetsAllocation(assetsNums = 5, data) {
   };
 
   return (
-    <div className="assetsAllocation-container">
+    // <div className="assetsAllocation-container">
+    <div>
       <div className="aa-header">
         {/*  // @Click Down Fitcher :
       <div className="aa-header" onClick={() => toggleAssetsData()}> */}
