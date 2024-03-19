@@ -78,28 +78,6 @@ margin-top: 7%;
       }
     }
 
-@media screen and (max-width: 1420px ){
-  width: 50%;
-  height: 70%;
-  // height: 30rem;
-  
-  // margin-top: 7%;
-  // margin-top: 0%;
-
-  // margin-bottom: 2%;
-
-  .balance-container{
-    .balance{
-        font-size: 150%;
-
-        .total-b{
-          font-size: 50%;
-          padding-bottom: 3%;
-        }
-      }
-    }
-
-}
 
 @media screen and (max-width: 820px ){
   width: 80%;
@@ -274,25 +252,25 @@ margin-top: 7%;
 
   // GRAPH
   .graph-container{
-    width: 50%;
-    height: 70%;
-    // height: 30rem;
-    
-    // margin-top: 7%;
-    // margin-top: 0%;
+      // width: 50%;
+      height: 70%;
+  // height: 30rem;
   
-    // margin-bottom: 2%;
-  
-    .balance-container{
-      .balance{
-          font-size: 150%;
-  
-          .total-b{
-            font-size: 50%;
-            padding-bottom: 3%;
-          }
+  // margin-top: 7%;
+  // margin-top: 0%;
+
+  // margin-bottom: 2%;
+
+  .balance-container{
+    .balance{
+        font-size: 150%;
+
+        .total-b{
+          font-size: 50%;
+          padding-bottom: 3%;
         }
       }
+    }
   }
 
   // ASSETS 
@@ -324,7 +302,7 @@ margin-top: 7%;
   
   // HOME 
   .home-container{
-    min-height: 85vh;
+    min-height: 90vh;
   }
 
   // GRAPH
@@ -345,6 +323,11 @@ margin-top: 7%;
           .total-b{
             font-size: 50%;
             padding-bottom: 3%;
+          }
+        }
+        .chart-buttons{
+          .btn{
+            font-size: 80%;
           }
         }
       }

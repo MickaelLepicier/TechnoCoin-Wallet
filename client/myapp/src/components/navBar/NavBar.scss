@@ -4,7 +4,6 @@
         align-items: center;
         min-width: 93vw;
         // height: 70px;
-        
     }
     li{
       list-style-type: none;
@@ -15,11 +14,11 @@
       color: white;
       cursor: pointer;
       transition: 0.3s ease-in-out;
-      font-size: clamp(100%,110%, 200%);
-      // font-size: 110%;
+
+      // font-size: clamp(100%,110%, 200%);
+      font-size: 110%;
       // font-size: 1vw;
       font-family: sans-serif;
-
     }
 
     li:hover{
@@ -149,7 +148,7 @@
         margin-right: 30px;
       }
       #mobile-icon i{
-        color: white;
+        // color: white;
         font-size: 20px;
       }
 
@@ -191,16 +190,52 @@
 
 // ------------------------------------------------------------------------------------
 
+@media screen and (max-width: 1024px ){
+
+  #mobile-icon i{
+    // color: white;
+    font-size: 1rem;
+  }
+
+  ul{
+    top: 7%;
+    min-width: 25vw;
+    min-height: 85vh;
+    // use overflow scroll like that you can scroll the ul all the way down
+    // ask chat GPT to help
+  }
+
+  li{
+    font-size: 80%;
+  }
+
+  .menu-open{
+    width: 13vw;
+    right: 32vw;
+    top: 55vh;
+  }
+
+  .dark-mode{
+    // margin-top: 120%;
+    // bottom: 0;
+      // margin-top: 70%;
+    margin-top: 15vh;
+  }
+
+}
+
+// --------------------------------------------------
 
 @media screen and (max-width: 820px ){
 
     #mobile-icon i{
-      color: white;
+      // color: white;
       font-size: 1rem;
     }
 
     ul{
-      top: 6%;
+      // top: 6%;
+      top: 5.9%;
       min-width: 30vw;
       min-height: 95vh;
       // use overflow scroll like that you can scroll the ul all the way down
