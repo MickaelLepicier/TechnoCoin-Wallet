@@ -92,6 +92,8 @@ export function NavBar({ menuRef }) {
     const handleClick = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setIconClicked(false);
+        setShowNFTMenu(false);
+        setShowAdminToolsMenu(false);
       }
     };
 

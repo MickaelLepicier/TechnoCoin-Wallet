@@ -201,8 +201,7 @@
     top: 7%;
     min-width: 25vw;
     min-height: 85vh;
-    // use overflow scroll like that you can scroll the ul all the way down
-    // ask chat GPT to help
+   
   }
 
   li{
@@ -263,6 +262,101 @@
   }
 
 
+  @media screen and (max-width: 480px ){
+
+    #mobile-icon i{
+      // color: white;
+      font-size: 1rem;
+    }
+    
+    ul{
+      min-width: 40vw;
+      min-height: 95vh;
+    }
+
+    li{
+      font-size: 80%;
+    }
+
+    .menu-open{
+      width: 15vw;
+    right: 42vw;
+    top: 50vh;
+    }
+
+    .dark-mode{
+      margin-top: 25vh;
+    }
+
+  }
+
+
+  @media screen and (max-width: 390px){
+
+    #mobile-icon i{
+      // color: white;
+      font-size: 1rem;
+    }
+    
+    ul{
+      min-width: 40vw;
+      min-height: 95vh;
+    }
+
+    li{
+      font-size: 80%;
+    }
+
+    .menu-open{
+      width: 17vw;
+    right: 42vw;
+    top: 50vh;
+    }
+
+    .dark-mode{
+      margin-top: 22vh;
+    }
+
+  }
+
+
+// TODOs:
+// Check again all the screens if all the sizes are correct.
+// Start cleaning the code ;)
+
+// Link to a good music :
+// https://www.youtube.com/watch?v=vSKL1QUo_b0
+
+// Link for Size :
+// https://testsigma.com/blog/common-screen-resolutions/
+
+  @media screen and (max-width: 390px) and (850px >= height >= 800px){
+
+    #mobile-icon i{
+      // color: white;
+      font-size: 1rem;
+    }
+    
+    ul{
+      min-width: 40vw;
+      min-height: 95vh;
+    }
+
+    li{
+      font-size: 80%;
+    }
+
+    .menu-open{
+      width: 15vw;
+    right: 42vw;
+    top: 47vh;
+    }
+
+    .dark-mode{
+      margin-top: 30vh;
+    }
+
+  }
 // don't use fixed width \ height.
 // Its better not to use height 
 

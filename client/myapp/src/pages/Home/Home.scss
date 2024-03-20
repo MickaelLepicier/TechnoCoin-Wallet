@@ -3,11 +3,6 @@
 //     height: 100%;
 // }
 
-// TODOs:
-// מסדר את גודל הדף , ואת הקומפוננטוט
-// link for pixels :
-// https://testsigma.com/blog/common-screen-resolutions/
-// Check most of the pixels and if it looks good
 
 .home-container{
     display: flex;
@@ -18,9 +13,6 @@
     // min-height: 100vh;
     min-height: 110vh;
 
-    @media screen and (max-width: 820px ){
-        min-height: 90vh;
-      }
       @media screen and (max-width: 500px ){
         min-height: 90vh;
       }
@@ -77,57 +69,6 @@ margin-top: 7%;
         }
       }
     }
-
-
-@media screen and (max-width: 820px ){
-  width: 80%;
-  height: 60%;
-  // height: 30rem;
-  // margin-top: 15%;
-  margin-top: 20%;
-
-  .balance-container{
-    .balance{
-        font-size: 150%;
-
-        .total-b{
-          font-size: 50%;
-          padding-bottom: 3%;
-        }
-      }
-      .chart-buttons{
-        .btn{
-          font-size: 70%;
-        }
-      }
-    }
-
-}
-
-
-@media screen and (max-width: 480px ){
-  // height: 20rem;
-
-  margin-top: -2%;
-  width: 90%;
-  // height: 50%;
-
-  // height: 30rem;
-  // margin-top: 20%;
-
-  
-
-  .balance-container{
-    .balance{
-        font-size: 120%;
-
-        .total-b{
-          font-size: 50%;
-        }
-      }
-    }
-
-}
   }
 
 
@@ -135,7 +76,6 @@ margin-top: 7%;
         width: 90%;
         margin-top:2%;
         // padding: 0.5%;
-
 
         background-color: rgba(128, 128, 128, 0.158);
         border-radius: 0.5%;
@@ -161,7 +101,6 @@ margin-top: 7%;
           width: 100%;
           // padding: 1%;
          
-        
         th , td{
           width: 10%;
           padding: 0.7%;
@@ -178,32 +117,9 @@ margin-top: 7%;
 
           font-size: 100%;
         }
-        
       }
 
      
-
-      @media screen and (max-width: 820px ){
-      
-        margin-top:5%;
-
-        .aa-header{
-          font-size: 100%;
-         }
-
-         table{
-
-         th , td{
-          padding: 1.5%;
-          font-size: 80%;
-        }
-
-        th{
-          font-size: 90%;
-        }
-      }
-
-      }
 
 
        // @ Click Down Fitcher :
@@ -239,9 +155,6 @@ margin-top: 7%;
 
 
 
-
-// TODO arrange all the code like this :
-// That each "@media screen" will be separated and all the components will be inside
 
 @media screen and (max-width: 1420px ){
   
@@ -318,11 +231,11 @@ margin-top: 7%;
   
     .balance-container{
       .balance{
-          font-size: 150%;
+          // font-size: 150%;
   
           .total-b{
-            font-size: 50%;
-            padding-bottom: 3%;
+            // font-size: 50%;
+            // padding-bottom: 3%;
           }
         }
         .chart-buttons{
@@ -362,16 +275,17 @@ margin-top: 7%;
   
   // HOME 
   .home-container{
-    // min-height: 85vh;
+    min-height: 88vh;
   }
 
   // GRAPH
   .graph-container{
-    width: 50%;
+
+    width: 75%;
     height: 70%;
     // height: 30rem;
     
-    // margin-top: 7%;
+    margin-top: 20%;
     // margin-top: 0%;
   
     // margin-bottom: 2%;
@@ -385,30 +299,35 @@ margin-top: 7%;
             padding-bottom: 3%;
           }
         }
+        .chart-buttons{
+                .btn{
+                  font-size: 70%;
+                 }
+              }
       }
   }
 
   // ASSETS 
   .assets-container{
 
-
-    // margin-top:5%;
+    margin-top:5%;
 
     .aa-header{
-      // font-size: 100%;
+      font-size: 100%;
      }
 
      table{
 
      th , td{
-      // padding: 1.5%;
-      // font-size: 80%;
+      padding: 1.5%;
+      font-size: 80%;
     }
 
     th{
-      // font-size: 90%;
+      font-size: 90%;
     }
   }
+
   }
 
 }
@@ -422,46 +341,45 @@ margin-top: 7%;
 
   // GRAPH
   .graph-container{
-    width: 50%;
-    height: 70%;
-    // height: 30rem;
-    
-    // margin-top: 7%;
-    // margin-top: 0%;
-  
-    // margin-bottom: 2%;
+
+    width: 85%;
   
     .balance-container{
       .balance{
-          font-size: 150%;
+          font-size: 130%;
   
           .total-b{
             font-size: 50%;
             padding-bottom: 3%;
           }
         }
+        .chart-buttons{
+          .btn{
+            font-size: 50%;
+           }
+        }
       }
+  
   }
 
   // ASSETS 
   .assets-container{
 
-
     // margin-top:5%;
 
     .aa-header{
-      // font-size: 100%;
+      font-size: 95%;
      }
 
      table{
 
      th , td{
       // padding: 1.5%;
-      // font-size: 80%;
+      font-size: 65%;
     }
 
     th{
-      // font-size: 90%;
+      font-size: 70%;
     }
   }
   }
