@@ -190,6 +190,14 @@
 
 // ------------------------------------------------------------------------------------
 
+@media screen and (max-width: 1280px ){
+  .menu-open{
+    top: 56vh;
+  }
+}
+
+// ------------------------------------------------------------------------------------
+
 @media screen and (max-width: 1024px ){
 
   #mobile-icon i{
@@ -209,9 +217,13 @@
   }
 
   .menu-open{
-    width: 13vw;
-    right: 32vw;
-    top: 55vh;
+    // width: 13vw;
+    // right: 32vw;
+    // top: 55vh;
+
+    width: 8vw;
+    right: 27vw;
+    top: 54vh;
   }
 
   .dark-mode{
@@ -247,9 +259,12 @@
     }
 
     .menu-open{
-      width: 13vw;
-      right: 32vw;
-      top: 55vh;
+      // width: 13vw;
+      // right: 32vw;
+      // top: 55vh;
+      width: 11vw;
+    right: 32vw;
+    top: 46vh;
     }
 
     .dark-mode{
