@@ -1,13 +1,25 @@
 ToDos:
 
-Graph !! :
 
-1. Understand how to create a Graph Chart
-2. Create a graph chart with fake data
+// Link for Screen Sizes (Desktop, Tablet, Mobile) :
+// https://testsigma.com/blog/common-screen-resolutions/
+
+// Link for GOOD MUSIC 
+// https://www.youtube.com/watch?v=vSKL1QUo_b0
 
 -------------------------
+TODOs:
+Clean the code from "//"
+Check that everything is working with the App
+Check if there is multiply code 
+Create functions to make the code shorter and efficient 
 
 for today:
+Change Colors of the buttons to blue (when on Light mode)
+Clean the code from "//"
+
+
+
 
 // TODO :
   // 1. סדר את הבאלאנס שיהיה מעל הגראף בצורה סימטרית

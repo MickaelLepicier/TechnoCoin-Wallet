@@ -2,11 +2,10 @@ import { Logo } from "../logo/logo";
 import { NavBar } from "../navBar/NavBar";
 import { useRef } from "react";
 
-import "./MenuBar.css";
+import "./MenuBar.scss";
 
 export function MenuBar() {
   const menuRef = useRef(null);
-  // ref is a shortcut for reference = התייחסות
 
   return (
     <div className="menuBar-container" ref={menuRef}>
@@ -15,5 +14,3 @@ export function MenuBar() {
     </div>
   );
 }
-
-// export default MenuBar;

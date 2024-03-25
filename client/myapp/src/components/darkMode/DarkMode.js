@@ -18,7 +18,7 @@ const DarkMode = () => {
   };
 
   // Delete this for the Dark & Light mode to work
-  setDarkMode();
+  // setDarkMode();
 
   return (
     <div className="dark_mode">
