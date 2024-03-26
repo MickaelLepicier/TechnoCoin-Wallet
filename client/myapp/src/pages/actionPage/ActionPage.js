@@ -1,4 +1,6 @@
-import "./ActionPage.css";
+// Done
+
+import "./ActionPage.scss";
 
 export function ActionPage() {
   return (
@@ -7,5 +9,3 @@ export function ActionPage() {
     </div>
   );
 }
-
-// export default MenuBar;

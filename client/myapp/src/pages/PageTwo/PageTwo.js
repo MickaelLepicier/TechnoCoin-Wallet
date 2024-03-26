@@ -1,4 +1,6 @@
-import "./PageTwo.css";
+// Done
+
+import "./PageTwo.scss";
 
 export function PageTwo() {
   return (
@@ -7,5 +9,3 @@ export function PageTwo() {
     </div>
   );
 }
-
-// export default MenuBar;

@@ -1,3 +1,5 @@
+// Done
+
 import "./logo.scss";
 import logo_img from "./logo_img.jpg";
 
@@ -8,5 +10,3 @@ export function Logo() {
     </div>
   );
 }
-
-// export default Logo;

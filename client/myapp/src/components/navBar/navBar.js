@@ -1,9 +1,9 @@
+// Done
+
 import { useNavigate } from "react-router-dom";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import DarkMode from "../darkMode/DarkMode";
 import "./NavBar.scss";
-// import { FiSun } from "react-icons/fi";
-// import { MdOutlineDarkMode } from "react-icons/md";
 
 /*
 // TODO create a loop to render all that:
@@ -32,7 +32,6 @@ function renderNavBarList(navigate) {
 
   return;
 }
-
 */
 
 export function NavBar({ menuRef }) {
@@ -42,7 +41,6 @@ export function NavBar({ menuRef }) {
 
   const [showNFTMenu, setShowNFTMenu] = useState(false);
   const [adminToolsMenu, setShowAdminToolsMenu] = useState(false);
-  // const menuRef = useRef(null);
 
   const classNameFunc = (str) => {
     return `link ${activeLink === str ? "active" : ""}`;

@@ -1,15 +1,18 @@
+// Done
+
 import { useState } from "react";
 import Buttons from "../../components/buttons/Buttons";
 import LineChart from "../../components/graph/LineChart";
 import { BtcData } from "../../data/BtcData";
 import "./Home.scss";
-// import { Balance } from "../../components/balance/Balance";
 
-function Balance() {
+// The balanceData is from the State
+function Balance(balanceData) {
   return (
     <div className="balance-container">
       <div className="balance">
         $10,000,000 <br />
+        {/* {balanceData} <br /> */}
         <div className="total-b">Total balance </div>
         <div className="growth">90%</div>
       </div>
@@ -24,19 +27,28 @@ function Balance() {
   );
 }
 
+// The data is from the State
 function AssetsAllocation(assetsNums = 5, data) {
-  // @ Click Down Fitcher :
+  const currentData = [
+    {
+      Asset: "TechnoCoin",
+      Price: "$1.00",
+      Allocation: "50.04%",
+      Amount: "999,999,999TC",
+      Value: "999,999,999$",
+    },
+    {
+      Asset: "BitCoin",
+      Price: "$25,923.00",
+      Allocation: "50.04%",
+      Amount: "999,999,999TC",
+      Value: "999,999,999$",
+    },
+  ];
 
-  // const toggleAssetsData = () => {
-  //   var element = document.querySelector(".assets-data");
-  //   element.classList.toggle("active");
-  // };
-
-  // the data is from the State
   const renderAssets = (data) => {
-    // take the data and use it to render it.
+    // find another way to create Table = map on the currentData...
 
-    // find another way to create Table
     return (
       <table className="assets-data">
         <thead>
@@ -69,17 +81,8 @@ function AssetsAllocation(assetsNums = 5, data) {
   };
 
   return (
-    // <div className="assetsAllocation-container">
     <div>
-      <div className="aa-header">
-        {/*  // @Click Down Fitcher :
-      <div className="aa-header" onClick={() => toggleAssetsData()}> */}
-        Assets allocation(5)
-        {/* @ Click Down Fitcher :
-        <div className="icon-down">
-          <div className="fa fa-caret-down" />{" "}
-        </div> */}
-      </div>
+      <div className="aa-header">Assets allocation(5)</div>
 
       <div>{renderAssets()}</div>
     </div>
@@ -88,7 +91,6 @@ function AssetsAllocation(assetsNums = 5, data) {
 
 export function Home() {
   const [btc, setBtc] = useState({
-    // TODO change the Data (BtcData) thro the buttons D1 , W1 ...
     labels: BtcData.map((data) => data.year),
     datasets: [
       {
@@ -98,10 +100,7 @@ export function Home() {
         backgroundColor: ["gold"],
         borderColor: "DarkSlateBlue",
         borderWidth: 2,
-        // pointRadius: 0,
-        // borderJoinStyle: "round",
         tension: 0.2,
-        // hoverBorderWidth: "200px",
 
         fill: {
           target: "origin",
@@ -115,8 +114,7 @@ export function Home() {
             gradient.addColorStop(0, "rgba(71, 61, 139, 0.8)"); // Lighter shade
             gradient.addColorStop(1, "rgba(71, 61, 139, 0.2)"); // Darker shade
             return gradient;
-          }, // Area will be DarkSlateBlue above the origin
-          // below: 'rgb(0, 0, 255)'    // And blue below the origin
+          },
         },
       },
     ],

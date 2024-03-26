@@ -1,4 +1,6 @@
-import "./AnotherActionPage.css";
+// Done
+
+import "./AnotherActionPage.scss";
 
 export function AnotherActionPage() {
   return (
@@ -7,5 +9,3 @@ export function AnotherActionPage() {
     </div>
   );
 }
-
-// export default MenuBar;

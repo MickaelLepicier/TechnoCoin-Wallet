@@ -1,10 +1,11 @@
+// Done
+
 import "./Buttons.scss";
 import buy_icon from "./buy_icon.png";
 import stake_icon from "./stake_icon.png";
 import swap_icon from "./swap_icon.png";
 
 function Buttons() {
-  // Data for the buttons in Object
   const btns = [
     {
       icon: buy_icon,

@@ -6,13 +6,19 @@ ToDos:
 
 // Link for GOOD MUSIC 
 // https://www.youtube.com/watch?v=vSKL1QUo_b0
+// https://open.spotify.com/playlist/37i9dQZF1EIZ1ZBc2Zo3v3
 
 -------------------------
 TODOs:
+v Change Colors of the buttons to blue (when on Light mode)
 Clean the code from "//"
 Check that everything is working with the App
 Check if there is multiply code 
-Create functions to make the code shorter and efficient 
+%Create functions to make the code shorter and efficient:
+1. In Home.js in AssetsAllocation() Find another way to create Table. in Buttons.js there is the .map().
+2. In NavBar.js in handleScroll() The function work each time we scroll.. maybe there is a way for it to work less 
+3. In NavBar.js in NavBar() can I loop to render all the buttons
+
 
 for today:
 Change Colors of the buttons to blue (when on Light mode)
