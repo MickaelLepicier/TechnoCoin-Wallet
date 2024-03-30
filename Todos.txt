@@ -11,8 +11,8 @@ ToDos:
 -------------------------
 TODOs:
 v Change Colors of the buttons to blue (when on Light mode)
-Clean the code from "//"
-Check that everything is working with the App
+v Clean the code from "//"
+v Check that everything is working with the App
 Check if there is multiply code 
 %Create functions to make the code shorter and efficient:
 1. In Home.js in AssetsAllocation() Find another way to create Table. in Buttons.js there is the .map().
@@ -21,8 +21,7 @@ Check if there is multiply code
 
 
 for today:
-Change Colors of the buttons to blue (when on Light mode)
-Clean the code from "//"
+Check if there is multiply code
 
 
 
