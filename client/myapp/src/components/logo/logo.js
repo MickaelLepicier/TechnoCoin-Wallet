@@ -1,5 +1,3 @@
-// Done
-
 import "./logo.scss";
 import logo_img from "./logo_img.jpg";
 

@@ -1,9 +1,7 @@
-// Done
-
+import "./DarkMode.scss";
 import React from "react";
 import { ReactComponent as Sun } from "./Sun.svg";
 import { ReactComponent as Moon } from "./Moon.svg";
-import "./DarkMode.scss";
 
 const DarkMode = () => {
   const setDarkMode = () => {
@@ -20,7 +18,7 @@ const DarkMode = () => {
   };
 
   // Delete this for the Dark & Light mode to work
-  // setDarkMode();
+  setDarkMode();
 
   return (
     <div className="dark_mode">

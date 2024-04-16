@@ -1,5 +1,3 @@
-// Done
-
 import "./Buttons.scss";
 import buy_icon from "./buy_icon.png";
 import stake_icon from "./stake_icon.png";

@@ -1,5 +1,3 @@
-// Done
-
 import "./LineChart.scss";
 import React from "react";
 import { Line } from "react-chartjs-2";
@@ -14,5 +12,6 @@ function LineChart({ btcData, options }) {
     </div>
   );
 }
+
 
 export default LineChart;
