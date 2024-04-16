@@ -21,6 +21,8 @@ Check if there is multiply code
 
 
 for today:
+Make the code in NavBar.js shorter and better
+
 Check if there is multiply code
 
 
