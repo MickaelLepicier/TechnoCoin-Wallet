@@ -1,40 +1,154 @@
-/*
+import "./NavBar.scss";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import DarkMode from "../darkMode/DarkMode";
-import "./NavBar.scss";
-*/
 
-/*
-// TODO create a loop to render all that:
-
-// navBar titles
+// navBar Data
 const navBarData = [
-  {"Home","/"}
-  {"Topups","/pageTwo"}
-  "Transfer",
-  "Deposits",
-  "Send Money",
-  "Settings",
-  "NFT",
-  "Admin Tools",
-  "Logout",
+  { title: "Home", path: "/" },
+  { title: "Topups", path: "/pageTwo" },
+  { title: "Transfer", path: "/pageTwo" },
+  { title: "Deposits", path: "/pageTwo" },
+  { title: "Send Money", path: "/pageTwo" },
+  { title: "Settings", path: "/pageTwo" },
+  {
+    title: "NFT",
+    path: "/nft",
+    submenu: [
+      { title: "action", path: "/actionPage" },
+      { title: "another action", path: "/anotherActionPage" },
+    ],
+  },
+  {
+    title: "Admin Tools",
+    path: "/admin-tools",
+    submenu: [
+      { title: "action", path: "/actionPage" },
+      { title: "another action", path: "/anotherActionPage" },
+    ],
+  },
 ];
 
-function renderNavBarList(navigate) {
-  // const navigate = useNavigate();
+export function NavBar({ menuRef }) {
+  const navigate = useNavigate();
+  const [iconClicked, setIconClicked] = useState(false);
+  const [showSubMenu, setShowSubMenu] = useState(null);
   const [activeLink, setActiveLink] = useState("/");
 
+  // li className
+  const classNameFunc = (str) => {
+    return `link ${activeLink === str ? "active" : ""}`;
+  };
+
+  // button click
   const linkClick = (path) => {
+    setShowSubMenu(null);
     setActiveLink(path);
     navigate(path);
   };
 
-  return;
+  // show / hide subMenu
+  const toggleSubMenu = (index) => {
+    setShowSubMenu(showSubMenu === index ? null : index);
+  };
+
+  const iconClick = () => {
+    setIconClicked(!iconClicked);
+    setShowSubMenu(null);
+  };
+
+  useEffect(() => {
+    // hide subMenu when scrolling
+    const handleScroll = () => {
+      const currentPosition = window.pageYOffset;
+      if (currentPosition > 0) {
+        setIconClicked(false);
+        setShowSubMenu(null);
+      }
+    };
+
+    // hide subMenu when screen-click
+    const handleClick = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIconClicked(false);
+        setShowSubMenu(null);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    document.addEventListener("click", handleClick);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("click", handleClick);
+    };
+  }, []);
+
+  return (
+    <div className="navBar-container">
+      <ul className={iconClicked ? "mobileOn" : ""}>
+        {navBarData.map((item, index) => (
+          <li key={index}>
+            {item.submenu ? (
+              /* create NFT and Admin Tools Links */
+              <div
+                className={classNameFunc(item.path)}
+                onClick={() => toggleSubMenu(index)}
+              >
+                {item.title}
+                <div className="fa fa-caret-down" />
+              </div>
+            ) : (
+              /* create Links */
+              <div
+                className={classNameFunc(item.path)}
+                onClick={() => linkClick(item.path)}
+              >
+                {item.title}
+              </div>
+            )}
+            {item.submenu && showSubMenu === index && (
+              /* create Sub-Links */
+              <div className="menu-open">
+                {item.submenu.map((subItem, subIndex) => {
+                  console.log(subItem);
+
+                  return (
+                    <div
+                      key={subIndex}
+                      className={classNameFunc(item.path)}
+                      onClick={() => linkClick(subItem.path)}
+                    >
+                      {subItem.title}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </li>
+        ))}
+        <div className="dark-mode">
+          <DarkMode />
+        </div>
+        <li className="logout">
+          {" "}
+          <div onClick={() => navigate("/pageTwo")}>Logout</div>
+        </li>
+      </ul>
+      <div id="mobile-icon" onClick={iconClick}>
+        <i className={iconClicked ? "fas fa-times" : "fas fa-bars"} />
+      </div>
+    </div>
+  );
 }
-*/
+
+// -----------------------------------------------------------------------------------
 
 /*
+import "./NavBar.scss";
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import DarkMode from "../darkMode/DarkMode";
+
 export function NavBar({ menuRef }) {
   const navigate = useNavigate();
   const [iconClicked, setIconClicked] = useState(false);
@@ -104,6 +218,8 @@ export function NavBar({ menuRef }) {
       document.removeEventListener("click", handleClick);
     };
   }, []);
+
+  
 
   return (
     <div className="navBar-container">
@@ -200,106 +316,3 @@ export function NavBar({ menuRef }) {
 }
 
 */
-
-// TODO make this code shorter and better :)
-
-import { useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
-import DarkMode from "../darkMode/DarkMode";
-import "./NavBar.scss";
-
-const navBarData = [
-  { title: "Home", path: "/" },
-  { title: "Topups", path: "/pageTwo" },
-  { title: "Transfer", path: "/transfer" },
-  { title: "Deposits", path: "/deposits" },
-  { title: "Send Money", path: "/send-money" },
-  { title: "Settings", path: "/settings" },
-  { title: "NFT", path: "/nft", submenu: ["action", "another action"] },
-  {
-    title: "Admin Tools",
-    path: "/admin-tools",
-    submenu: ["action", "another action"],
-  },
-  { title: "Logout", path: "/logout" },
-];
-
-export function NavBar({ menuRef }) {
-  const navigate = useNavigate();
-  const [iconClicked, setIconClicked] = useState(false);
-  const [showSubMenu, setShowSubMenu] = useState(null);
-
-  const linkClick = (path) => {
-    setShowSubMenu(null);
-    navigate(path);
-  };
-
-  const toggleSubMenu = (index) => {
-    setShowSubMenu(showSubMenu === index ? null : index);
-  };
-
-  const iconClick = () => {
-    setIconClicked(!iconClicked);
-    setShowSubMenu(null);
-  };
-
-  useEffect(() => {
-    const handleClick = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setIconClicked(false);
-        setShowSubMenu(null);
-      }
-    };
-
-    document.addEventListener("click", handleClick);
-    return () => {
-      document.removeEventListener("click", handleClick);
-    };
-  }, []);
-
-  return (
-    <div className="navBar-container">
-      <ul className={iconClicked ? "mobileOn" : ""}>
-        {navBarData.map((item, index) => (
-          <li key={index}>
-            {item.submenu ? (
-              <div
-                className={`link ${showSubMenu === index ? "active" : ""}`}
-                onClick={() => toggleSubMenu(index)}
-              >
-                {item.title}
-                <div className="fa fa-caret-down" />
-              </div>
-            ) : (
-              <div
-                className={`link ${showSubMenu === index ? "active" : ""}`}
-                onClick={() => linkClick(item.path)}
-              >
-                {item.title}
-              </div>
-            )}
-            {item.submenu && showSubMenu === index && (
-              <div className="menu-open">
-                {item.submenu.map((subItem, subIndex) => (
-                  <div
-                    key={subIndex}
-                    className="link"
-                    onClick={() => linkClick(`/${subItem.toLowerCase()}`)}
-                  >
-                    {subItem}
-                  </div>
-                ))}
-              </div>
-            )}
-          </li>
-        ))}
-        <div className="dark-mode">
-          <DarkMode />
-        </div>
-      </ul>
-      <div id="mobile-icon" onClick={iconClick}>
-        <i className={iconClicked ? "fas fa-times" : "fas fa-bars"} />
-      </div>
-    </div>
-  );
-}
