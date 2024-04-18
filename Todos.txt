@@ -13,19 +13,16 @@ TODOs:
 v Change Colors of the buttons to blue (when on Light mode)
 v Clean the code from "//"
 v Check that everything is working with the App
-Check if there is multiply code 
-%Create functions to make the code shorter and efficient:
-1. In Home.js in AssetsAllocation() Find another way to create Table. in Buttons.js there is the .map().
-2. In NavBar.js in handleScroll() The function work each time we scroll.. maybe there is a way for it to work less 
-3. In NavBar.js in NavBar() can I loop to render all the buttons
+v Check if there is multiply code 
+v %Create functions to make the code shorter and efficient:
+v 1. In Home.js in AssetsAllocation() Find another way to create Table. in Buttons.js there is the .map().
+v 2. In NavBar.js in handleScroll() The function work each time we scroll.. maybe there is a way for it to work less 
+v 3. In NavBar.js in NavBar() can I loop to render all the buttons
 
+Explain Moshe how the code is working.
 
 for today:
-Make the code in NavBar.js shorter and better
-
-Check if there is multiply code
-
-
+I finished :)
 
 
 // TODO :
