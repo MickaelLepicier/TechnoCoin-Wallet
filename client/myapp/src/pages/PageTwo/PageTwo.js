@@ -1,5 +1,3 @@
-// Done
-
 import "./PageTwo.scss";
 
 export function PageTwo() {

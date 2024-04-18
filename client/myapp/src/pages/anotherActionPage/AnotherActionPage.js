@@ -1,5 +1,3 @@
-// Done
-
 import "./AnotherActionPage.scss";
 
 export function AnotherActionPage() {

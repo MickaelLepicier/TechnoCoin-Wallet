@@ -1,5 +1,3 @@
-// Done
-
 import "./ActionPage.scss";
 
 export function ActionPage() {

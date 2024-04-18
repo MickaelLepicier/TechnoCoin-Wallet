@@ -1,12 +1,10 @@
-// Done
-
+import "./Home.scss";
 import { useState } from "react";
 import Buttons from "../../components/buttons/Buttons";
 import LineChart from "../../components/graph/LineChart";
 import { BtcData } from "../../data/BtcData";
-import "./Home.scss";
 
-// The balanceData is from the State
+// Todo later on The balanceData is from the State
 function Balance(balanceData) {
   return (
     <div className="balance-container">
@@ -27,7 +25,7 @@ function Balance(balanceData) {
   );
 }
 
-// The data is from the State
+// Todo later on The data is from the State
 function AssetsAllocation(assetsNums = 5, data) {
   const currentData = [
     {
@@ -47,7 +45,17 @@ function AssetsAllocation(assetsNums = 5, data) {
   ];
 
   const renderAssets = (data) => {
-    // find another way to create Table = map on the currentData...
+    let assetsData = currentData.map((asset, index) => {
+      return (
+        <tr key={index}>
+          <td>{asset.Asset}</td>
+          <td>{asset.Price}</td>
+          <td>{asset.Allocation} </td>
+          <td>{asset.Amount} </td>
+          <td>{asset.Value}</td>
+        </tr>
+      );
+    });
 
     return (
       <table className="assets-data">
@@ -60,22 +68,7 @@ function AssetsAllocation(assetsNums = 5, data) {
             <th>Value</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>TechnoCoin</td>
-            <td>$1.00</td>
-            <td>50.04% </td>
-            <td>999,999,999 TC </td>
-            <td>999,999,999$</td>
-          </tr>
-          <tr>
-            <td>BitCoin</td>
-            <td>$25,923.00</td>
-            <td>50.04% </td>
-            <td>999,999,999 TC </td>
-            <td>999,999,999$</td>
-          </tr>
-        </tbody>
+        <tbody>{assetsData}</tbody>
       </table>
     );
   };
@@ -90,6 +83,7 @@ function AssetsAllocation(assetsNums = 5, data) {
 }
 
 export function Home() {
+  // BitCoin Data
   const [btc, setBtc] = useState({
     labels: BtcData.map((data) => data.year),
     datasets: [

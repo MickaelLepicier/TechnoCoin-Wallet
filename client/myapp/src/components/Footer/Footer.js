@@ -1,5 +1,3 @@
-// Done
-
 import "./Footer.scss";
 
 export function Footer() {

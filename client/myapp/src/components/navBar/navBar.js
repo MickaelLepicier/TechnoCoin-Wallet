@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import DarkMode from "../darkMode/DarkMode";
 
-// navBar Data
+// navBar menu Data
 const navBarData = [
   { title: "Home", path: "/" },
   { title: "Topups", path: "/pageTwo" },
@@ -61,6 +61,12 @@ export function NavBar({ menuRef }) {
     // hide subMenu when scrolling
     const handleScroll = () => {
       const currentPosition = window.pageYOffset;
+
+      // check if the subMenu is open, It make the function work less.
+      const mobileOn = document.querySelector(".mobileOn");
+      if (!mobileOn) return;
+
+      // hide subMenu
       if (currentPosition > 0) {
         setIconClicked(false);
         setShowSubMenu(null);
@@ -89,7 +95,7 @@ export function NavBar({ menuRef }) {
         {navBarData.map((item, index) => (
           <li key={index}>
             {item.submenu ? (
-              /* create NFT and Admin Tools Links */
+              // create NFT and Admin Tools Links
               <div
                 className={classNameFunc(item.path)}
                 onClick={() => toggleSubMenu(index)}
@@ -98,7 +104,7 @@ export function NavBar({ menuRef }) {
                 <div className="fa fa-caret-down" />
               </div>
             ) : (
-              /* create Links */
+              // create Links
               <div
                 className={classNameFunc(item.path)}
                 onClick={() => linkClick(item.path)}
@@ -107,11 +113,9 @@ export function NavBar({ menuRef }) {
               </div>
             )}
             {item.submenu && showSubMenu === index && (
-              /* create Sub-Links */
+              // create Sub-Links
               <div className="menu-open">
                 {item.submenu.map((subItem, subIndex) => {
-                  console.log(subItem);
-
                   return (
                     <div
                       key={subIndex}

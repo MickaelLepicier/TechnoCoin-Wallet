@@ -1,5 +1,3 @@
-// Data
-
 // Todo later on fetch real cryptocurrency data
 
 export const BtcData = [

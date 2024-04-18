@@ -1,3 +1,4 @@
+import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import { Home } from "./pages/home/Home.js";
 import { PageTwo } from "./pages/pageTwo/PageTwo.js";
@@ -5,7 +6,6 @@ import { MenuBar } from "./components/menuBar/MenuBar.js";
 import { Footer } from "./components/footer/Footer.js";
 import { ActionPage } from "./pages/actionPage/ActionPage.js";
 import { AnotherActionPage } from "./pages/anotherActionPage/AnotherActionPage.js";
-import "./App.css";
 
 function App() {
   return (
